@@ -3764,7 +3764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 72.5, y: 151.18999}
+  m_AnchoredPosition: {x: 422, y: 388}
   m_SizeDelta: {x: 163.14, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853833913
@@ -3850,7 +3850,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.655777, w: -0.000030517578}
+  m_margin: {x: 0, y: -4.2619276, z: 0.655777, w: -0.000030517578}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4054,7 +4054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96.45, y: -42.35501}
+  m_AnchoredPosition: {x: -98, y: -43.899994}
   m_SizeDelta: {x: 192.9, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &922538167
@@ -4264,7 +4264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.600006, y: -22.529999}
+  m_AnchoredPosition: {x: -93, y: -22.529999}
   m_SizeDelta: {x: 187.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &938868989
@@ -6735,7 +6735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257.9, y: 133.44}
+  m_AnchoredPosition: {x: 645, y: 349.8}
   m_SizeDelta: {x: 180.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467674796
@@ -7105,8 +7105,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 65.91, y: 171.19}
-  m_SizeDelta: {x: 189.78, y: 20}
+  m_AnchoredPosition: {x: 435, y: 364}
+  m_SizeDelta: {x: 189.78, y: 16.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533268791
 MonoBehaviour:
@@ -7191,7 +7191,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.000091552734, y: 0, z: 0, w: 0.07585486}
+  m_margin: {x: 0.000091552734, y: -3.196391, z: 0, w: 0.07585486}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
