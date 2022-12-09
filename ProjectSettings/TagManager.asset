@@ -12,6 +12,7 @@ TagManager:
   - PLATFORM
   - CURVE
   - CURVE_END
+  - NORMAL_ENEMY
   layers:
   - Default
   - TransparentFX

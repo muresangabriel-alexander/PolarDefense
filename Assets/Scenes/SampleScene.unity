@@ -6693,7 +6693,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE_END
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -8798,7 +8798,7 @@ GameObject:
   - component: {fileID: 2134156261}
   m_Layer: 0
   m_Name: car
-  m_TagString: Untagged
+  m_TagString: NORMAL_ENEMY
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8883,4 +8883,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 3
