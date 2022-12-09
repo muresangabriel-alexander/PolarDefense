@@ -288,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -368,7 +368,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE_END
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -828,7 +828,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -1148,7 +1148,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -3511,6 +3511,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waypoint (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE
+      objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_RootOrder
@@ -4761,6 +4766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waypoint (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE
+      objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_RootOrder
@@ -4995,6 +5005,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waypoint (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE
+      objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_RootOrder
@@ -5069,6 +5084,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: waypoint (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -5148,7 +5168,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -5374,6 +5394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: waypoint (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -5608,7 +5633,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE_END
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -5688,7 +5713,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -6530,7 +6555,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -6895,7 +6920,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_Name
-      value: waypoint
+      value: waypoint (0)
       objectReference: {fileID: 0}
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -6976,6 +7001,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: waypoint (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE_END
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -7417,6 +7447,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waypoint (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE_END
+      objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_RootOrder
@@ -7641,6 +7676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: waypoint (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -7954,7 +7994,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -8343,7 +8383,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: WAYPOINT
+      value: CURVE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -9049,6 +9089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: waypoint (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
+        type: 3}
+      propertyPath: m_TagString
+      value: CURVE
+      objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_RootOrder
@@ -9507,9 +9552,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2134156260}
   - component: {fileID: 2134156259}
+  - component: {fileID: 2134156261}
   m_Layer: 0
   m_Name: car
-  m_TagString: Untagged
+  m_TagString: NORMAL_ENEMY
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9573,11 +9619,24 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134156258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0011950238, w: -0.9999993}
   m_LocalPosition: {x: -7.64, y: -4.61, z: 0}
   m_LocalScale: {x: 0.4866, y: 0.54, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.137}
+--- !u!114 &2134156261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134156258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8fc8d3b417b6d4d900fd006aaefe6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
