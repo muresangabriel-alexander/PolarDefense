@@ -10,6 +10,8 @@ TagManager:
   - WAYPOINT
   - FINISH_LINE
   - PLATFORM
+  - CURVE
+  - CURVE_END
   layers:
   - Default
   - TransparentFX
