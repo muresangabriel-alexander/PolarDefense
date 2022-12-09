@@ -6,14 +6,14 @@ using UnityEngine;
 public class StatusBoard : MonoBehaviour
 {
     [SerializeField]
-    private FloatStatusBoardObject statusBoardObject;
+    private StatusBoardSO statusBoardObject;
 
     [SerializeField]
     TextMeshProUGUI destroyedVehiclesTextField;
     [SerializeField]
     TextMeshProUGUI spawnedVehiclesTextField;
     [SerializeField]
-    TextMeshProUGUI collectedShardsTextField;
+    TextMeshProUGUI collectedScrapsTextField;
     [SerializeField]
     TextMeshProUGUI fishAvailableTextField;
     [SerializeField]
@@ -23,7 +23,7 @@ public class StatusBoard : MonoBehaviour
     void Start()
     {
         statusBoardObject.SetSpawnedVehicles(0);
-        statusBoardObject.SetCollectedShards(0);
+        statusBoardObject.SetCollectedScraps(0);
         statusBoardObject.SetDestroyedVehicles(0);
         statusBoardObject.SetFishEaten(0);
         statusBoardObject.SetFishAvailable(0);
@@ -38,8 +38,8 @@ public class StatusBoard : MonoBehaviour
         string spawnedVehiclesText = "Vehicles spawned: " + statusBoardObject.GetSpawnedVehicles() + "/" + statusBoardObject.GetTotalAmountOfVehiclesInWave();
         spawnedVehiclesTextField.GetComponent<TMPro.TextMeshProUGUI>().text = spawnedVehiclesText;
 
-        string collectedShardsText = "Shards collected: " + statusBoardObject.GetCollectedShards();
-        collectedShardsTextField.GetComponent<TMPro.TextMeshProUGUI>().text = collectedShardsText;
+        string collectedScrapsText = "Scraps collected: " + statusBoardObject.GetCollectedScraps();
+        collectedScrapsTextField.GetComponent<TMPro.TextMeshProUGUI>().text = collectedScrapsText;
 
         string fishAvailableText = "Fish available: " + statusBoardObject.GetFishAvailable();
         fishAvailableTextField.GetComponent<TMPro.TextMeshProUGUI>().text = fishAvailableText;

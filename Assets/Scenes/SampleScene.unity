@@ -2840,7 +2840,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2891,7 +2891,7 @@ MonoBehaviour:
   statusBoardObject: {fileID: 11400000, guid: dab9e4d201bec5f47b2116a6ad32dd3f, type: 2}
   destroyedVehiclesTextField: {fileID: 922538168}
   spawnedVehiclesTextField: {fileID: 938868990}
-  collectedShardsTextField: {fileID: 1467674796}
+  collectedScrapsTextField: {fileID: 1467674796}
   fishAvailableTextField: {fileID: 1533268791}
   fishEatenTextField: {fileID: 853833913}
 --- !u!1001 &626165713
@@ -4049,7 +4049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96.199, y: -46.675}
+  m_AnchoredPosition: {x: -96.199005, y: -46.675003}
   m_SizeDelta: {x: 192.3983, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &922538167
@@ -4259,7 +4259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -91, y: -24.58}
+  m_AnchoredPosition: {x: -91, y: -24.580002}
   m_SizeDelta: {x: 192.3983, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &938868989
@@ -4290,7 +4290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Vehicles spawned: 0/100'
+  m_text: 'Vehicles spawned: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6687,7 +6687,7 @@ GameObject:
   - component: {fileID: 1467674797}
   - component: {fileID: 1467674796}
   m_Layer: 5
-  m_Name: CollectedShardsText
+  m_Name: CollectedScrapsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6733,7 +6733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Collected shards:'
+  m_text: 'Scraps collected:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
