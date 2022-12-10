@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BuildWind : MonoBehaviour
+{
+    public Sprite hoveredOver;
+    SpriteRenderer sprite;
+    Sprite defaultSprite;
+    public GameObject towerObject;
+    public GameObject platform;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+    void Awake()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+        defaultSprite = GetComponent<SpriteRenderer>().sprite;
+    }
+
+    public void OnMouseEnter()
+    {
+        sprite.sprite = hoveredOver;
+        
+    }
+
+    public void OnMouseExit()
+    {
+        sprite.sprite = defaultSprite;
+    }
+    
+    void OnMouseDown()
+    {
+        PlatformLogic.existentMenuLocation.buildChosenTower(towerObject);
+            
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

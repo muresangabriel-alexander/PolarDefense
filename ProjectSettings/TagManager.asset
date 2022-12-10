@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PLATFORMS
+    uniqueID: 1184158933
+    locked: 0
   - name: Actors
     uniqueID: 4038615833
     locked: 0
