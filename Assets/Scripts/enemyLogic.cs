@@ -60,7 +60,7 @@ public class enemyLogic : MonoBehaviour
 
     private void calculateRotationinCurve(Transform target)
     {
-        if (target.tag == Constants.CURVE_END && !targetFlipHandled)
+        if (target.tag == Constants.CURVE_MIDDLE && !targetFlipHandled)
         {
             gameObject.transform.localScale = new Vector3(-gameObject.transform.localScale.x, 
                                                            gameObject.transform.localScale.y, 
