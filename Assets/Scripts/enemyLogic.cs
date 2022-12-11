@@ -11,6 +11,8 @@ public class enemyLogic : MonoBehaviour
     private int currentTargetCounter = 0;
     private bool targetFlipHandled = false;
 
+    private Vector3 truckOffset = new Vector3(0.0f, 0.2f, 0.0f);
+
     private float speed = 0.0f;
     private int damage = 0;
     private int health = 0;
@@ -81,7 +83,10 @@ public class enemyLogic : MonoBehaviour
     {
         target = GameObject.Find($"waypoint ({currentTargetCounter})");
 
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
+        if (gameObject.tag != Constants.NORMAL_ENEMY)
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position + truckOffset, speed * Time.deltaTime);
+        else
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
         calculateRotationinCurve(target.transform);
 
         if (calculateDistance(gameObject.transform, target.transform) < 0.3)

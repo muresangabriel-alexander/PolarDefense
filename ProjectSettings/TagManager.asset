@@ -13,6 +13,8 @@ TagManager:
   - CURVE
   - CURVE_END
   - NORMAL_ENEMY
+  - CRANE_TRUCK_ENEMY
+  - TRUCK_ENEMY
   layers:
   - Default
   - TransparentFX
