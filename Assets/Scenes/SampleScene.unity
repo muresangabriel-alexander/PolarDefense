@@ -1148,7 +1148,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: CURVE
+      value: CURVE_MIDDLE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -5088,7 +5088,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: CURVE
+      value: CURVE_MIDDLE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -5168,7 +5168,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: CURVE
+      value: CURVE_MIDDLE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -7680,7 +7680,7 @@ PrefabInstance:
     - target: {fileID: 5195321850317823082, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
       propertyPath: m_TagString
-      value: CURVE
+      value: CURVE_MIDDLE
       objectReference: {fileID: 0}
     - target: {fileID: 5930578129467920350, guid: 358665b4e1f1d0649ba2708496025139,
         type: 3}
@@ -7849,7 +7849,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f301cbdb0a38aa42b1043693ab06853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initSpawnPoint: {x: -9.94, y: -4.61, z: 0}
+  initSpawnPointNormal: {x: -9.94, y: -4.61, z: 0}
+  initSpawnPointTruck: {x: -9.94, y: -4.36, z: 0}
+  initSpawnPointCraneTruck: {x: -9.94, y: -4.384295, z: 0}
   enemySpawnProbabilty: 
   NormalEnemy: {fileID: 250736271660730180, guid: ab7ec198136952848b6b2aa0333a4109,
     type: 3}

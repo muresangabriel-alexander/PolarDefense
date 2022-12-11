@@ -15,6 +15,7 @@ TagManager:
   - NORMAL_ENEMY
   - CRANE_TRUCK_ENEMY
   - TRUCK_ENEMY
+  - CURVE_MIDDLE
   layers:
   - Default
   - TransparentFX
