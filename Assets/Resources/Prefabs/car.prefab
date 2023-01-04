@@ -98,3 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  damageView: {fileID: 2799954734224290497, guid: c5f3c29fd9d58544683a8b2b085a7859,
+    type: 3}
