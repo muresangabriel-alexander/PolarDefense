@@ -1848,7 +1848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303.1, y: 183.58}
+  m_AnchoredPosition: {x: -315, y: 183.58}
   m_SizeDelta: {x: 166.9, y: 12.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420689677
@@ -2899,6 +2899,7 @@ GameObject:
   - component: {fileID: 593004048}
   - component: {fileID: 593004047}
   - component: {fileID: 593004049}
+  - component: {fileID: 593004050}
   m_Layer: 5
   m_Name: StatusBoard
   m_TagString: Untagged
@@ -2972,6 +2973,29 @@ MonoBehaviour:
   collectedScrapsTextField: {fileID: 1467674796}
   fishAvailableTextField: {fileID: 1533268791}
   fishEatenTextField: {fileID: 853833913}
+--- !u!114 &593004050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593004046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!1001 &626165713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9090,7 +9114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303.1, y: 201.4}
+  m_AnchoredPosition: {x: -315, y: 201.4}
   m_SizeDelta: {x: 166.9, y: 12.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865832964
