@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class enemyLogic : MonoBehaviour
 {
@@ -91,8 +92,8 @@ public class enemyLogic : MonoBehaviour
 
         if (calculateDistance(gameObject.transform, target.transform) < 0.3)
         {
-
             SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
+
             if (target.tag == Constants.TUNNEL_ENTRY)
                 renderer.enabled = false;
             else if (target.tag == Constants.TUNNEL_EXIT)
@@ -102,7 +103,13 @@ public class enemyLogic : MonoBehaviour
             {
                 // TODO decrease player health once player scripts are there
                 // player_health -= damage;
+
+
+                GameObject[] variableForPrefab = Resources.LoadAll<GameObject>("Prefabs\\damageText");
+                playerScript.health -= damage;
+                GameObject view = UtilityHelpers.showDamage(variableForPrefab[0], -damage);
                 Destroy(gameObject);
+                Debug.Log("Still running");
             }
 
             targetFlipHandled = false;
