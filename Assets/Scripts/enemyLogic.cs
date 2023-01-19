@@ -9,6 +9,8 @@ public class enemyLogic : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject target;
+    public bool isEnemy = true;
+
     private int currentTargetCounter = 0;
     private bool targetFlipHandled = false;
 
