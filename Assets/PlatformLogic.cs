@@ -60,18 +60,25 @@ public class PlatformLogic : MonoBehaviour
             isMenuUp = true;
         }
     }
-    
+
     public void buildChosenTower(GameObject tower)
     {
-        
-        builtTower = Instantiate(tower, transform.position +  new Vector3(0f,0.25f,0f), Quaternion.identity);
-        if (isMenuUp && existentMenuLocation ==  this)
+        if (tower.tag == Constants.WATER_TOWER && !checkTagIsWaterPlatform())
+        {
+            return;
+        }
+        builtTower = Instantiate(tower, transform.position + new Vector3(0f, 0.25f, 0f), Quaternion.identity);
+        if (isMenuUp && existentMenuLocation == this)
         {
             Destroy(menuInstance);
             menuInstance = null;
             isMenuUp = false;
             existentMenuLocation = null;
         }
+    }
+    public bool checkTagIsWaterPlatform()
+    {
+        return CompareTag(Constants.PLATFORM_WATER);
     }
     
     public void OnMouseEnter()

@@ -6,22 +6,17 @@ public class WaterTowerScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float floodingRate = 2.0f;
-    public float floodedRate = 1.0f;
-
-
     private float cooldownTime;
-    private float floodedTime;
+    private float waterFloodedCountdown;
     private bool isFlooded;
-    private Transform water;
-    private void Awake()
+        private void Awake()
     {
     }
     void Start()
     {
         isFlooded = false;
         cooldownTime = 0.0f;
-        floodedTime = floodingRate;
+        waterFloodedCountdown = Constants.WATER_TOWER_FLOODING_RATE;
         transform.GetChild(0).gameObject.SetActive(false);
     }
 
@@ -34,15 +29,15 @@ public class WaterTowerScript : MonoBehaviour
         }
         if (isFlooded)
         {
-            if (floodedTime > 0f)
+            if (waterFloodedCountdown > 0f)
             {
-                floodedTime -= Time.deltaTime;
+                waterFloodedCountdown -= Time.deltaTime;
             }
             else
             {
                 transform.GetChild(0).gameObject.SetActive(false);
                 isFlooded = false;
-                floodedTime = floodedRate;
+                waterFloodedCountdown = Constants.WATER_FLOODING_TIME;
             }
         }
     }
@@ -51,10 +46,10 @@ public class WaterTowerScript : MonoBehaviour
     {
         if(canAttack)
         {
-            cooldownTime = floodingRate;
+            cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
             transform.GetChild(0).gameObject.SetActive(true);
             isFlooded = true;
-            cooldownTime = floodingRate;
+            cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
         }
     }
 
@@ -62,7 +57,7 @@ public class WaterTowerScript : MonoBehaviour
     {
         get
         {
-            return cooldownTime <= 0f & floodedTime > 0f;
+            return cooldownTime <= 0f & waterFloodedCountdown > 0f;
         }
     }
 }

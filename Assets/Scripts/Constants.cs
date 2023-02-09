@@ -16,6 +16,8 @@ public class Constants : MonoBehaviour
         public static readonly string NORMAL_ENEMY = "NORMAL_ENEMY";
         public static readonly string TRUCK_ENEMY = "TRUCK_ENEMY";
         public static readonly string CRANE_TRUCK_ENEMY = "CRANE_TRUCK_ENEMY"; 
+        public static readonly string WATER_TOWER = "WATER_TOWER"; 
+        public static readonly string PLATFORM_WATER = "PLATFORM_WATER"; 
 
 
 
@@ -43,6 +45,11 @@ public class Constants : MonoBehaviour
         TRUCK_ENEMY,
         CRANE_TRUCK_ENEMY
     }
+
+
+    // water tower constants
+    public static readonly float WATER_TOWER_FLOODING_RATE = 3.0f;
+    public static readonly float WATER_FLOODING_TIME = 1.0f;
 
 
 }

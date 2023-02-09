@@ -18,8 +18,10 @@ public class enemyLogic : MonoBehaviour
 
     private float speed = 0.0f;
     private int damage = 0;
-    private int health = 0;
+    public float health = 0;
     private int enemypoints = 0;
+
+    private bool inWater = false;
 
 
     void Start()
@@ -121,6 +123,12 @@ public class enemyLogic : MonoBehaviour
         // TODO decrease enemy health once fire projectiles are here 
         // health -= towerdamage;
         // StartCoroutine(wait());
+        if (inWater)
+        {
+            health -= 0.1f;
+            StartCoroutine(wait());
+        }
+        
     }
     // Update is called once per frame
     void Update()
@@ -132,4 +140,22 @@ public class enemyLogic : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<WaterScript>() != null)
+        {
+            inWater = true;
+            speed = speed / 4;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<WaterScript>() != null)
+        {
+            inWater = false;
+            speed = speed * 4;
+        }
+    }
+
 }
