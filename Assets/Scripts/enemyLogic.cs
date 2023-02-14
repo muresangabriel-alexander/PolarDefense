@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class enemyLogic : MonoBehaviour
 {
@@ -103,10 +104,8 @@ public class enemyLogic : MonoBehaviour
             {
                 // TODO decrease player health once player scripts are there
                 // player_health -= damage;
-
-
                 GameObject[] variableForPrefab = Resources.LoadAll<GameObject>("Prefabs\\damageText");
-                playerScript.health -= damage;
+                HealthBarScript.currentHealth -= damage;
                 GameObject view = UtilityHelpers.showDamage(variableForPrefab[0], -damage);
                 Destroy(gameObject);
                 Debug.Log("Still running");

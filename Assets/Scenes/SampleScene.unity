@@ -1824,6 +1824,7 @@ GameObject:
   - component: {fileID: 420689675}
   - component: {fileID: 420689678}
   - component: {fileID: 420689677}
+  - component: {fileID: 420689679}
   m_Layer: 5
   m_Name: HungerBar
   m_TagString: Untagged
@@ -1864,7 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.98039216, g: 0.5019608, b: 0.44705883, a: 1}
+  m_Color: {r: 1, g: 0.34628192, b: 0.2688679, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1889,6 +1890,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420689674}
   m_CullTransparentMesh: 1
+--- !u!114 &420689679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420689674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd841bb5273156f469d9a31eb9eda54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungerbar: {fileID: 420689677}
 --- !u!1001 &435802035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3866,7 +3880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 403.3, y: 381.4}
+  m_AnchoredPosition: {x: 288.97, y: 117}
   m_SizeDelta: {x: 163.14, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853833913
@@ -3889,7 +3903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fish eaten:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7207,7 +7221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 417.9, y: 358.3}
+  m_AnchoredPosition: {x: 299.71, y: 90}
   m_SizeDelta: {x: 189.78, y: 16.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533268791
@@ -8225,6 +8239,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1723042044}
   - component: {fileID: 1723042043}
+  - component: {fileID: 1723042045}
+  - component: {fileID: 1723042046}
   m_Layer: 0
   m_Name: normal
   m_TagString: Untagged
@@ -8291,7 +8307,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723042042}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.58, y: 2.71, z: 0}
   m_LocalScale: {x: 0.40490016, y: 0.40213406, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8299,6 +8315,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723042045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723042042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7add9adee8c59ed4f9cd28c315fca861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: 4dd020ee9dfb8a04a87b9dd86febd9d3, type: 3}
+  statusBoardObject: {fileID: 11400000, guid: dab9e4d201bec5f47b2116a6ad32dd3f, type: 2}
+  spriteRenderer: {fileID: 1723042043}
+  newSprite: {fileID: 21300000, guid: 92d04643508368c4ebf098acbc915bda, type: 3}
+  normalSprite: {fileID: 21300000, guid: 850ca64b66f1fb84bb48dc97dd2063b2, type: 3}
+  sadSprite: {fileID: 21300000, guid: 01847cc7cf6d4594d8038399f8220ed1, type: 3}
+--- !u!135 &1723042046
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723042042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.47
+  m_Center: {x: -0.1, y: 0.38, z: 0}
 --- !u!1001 &1753987245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9114,7 +9161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315, y: 201.4}
+  m_AnchoredPosition: {x: -315, y: 159.3}
   m_SizeDelta: {x: 166.9, y: 12.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865832964
