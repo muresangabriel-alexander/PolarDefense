@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUi;
+    public GameObject waypoints;
+    public GameObject platforms;
 
     private void Update()
     {
@@ -30,6 +32,8 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUi.SetActive(false);
+        waypoints.SetActive(true);
+        platforms.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -38,6 +42,8 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUi.SetActive(true);
+        waypoints.SetActive(false);
+        platforms.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
 
@@ -45,9 +51,8 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        Debug.Log("Would load StartMenu ...");
-        //TODO when issue 30 is merged:
-        //SceneManager.LoadScene("Scenes/StartMenu");
+        Debug.Log("Loading StartMenu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     
     public void QuitGame()
