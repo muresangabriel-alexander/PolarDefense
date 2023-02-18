@@ -9,7 +9,7 @@ public class HungerBarScript : MonoBehaviour
     private Color StartColor = new Color32(250, 128, 114, 255);
     private Color middleColor = new Color32(253, 103, 85, 255);
     private Color endColor = new Color32(253, 89, 69, 255);
-    private float timer = 7.0f;
+    private float timer = 0.0f;
 
     [SerializeField]
     private Image hungerbar; 
@@ -76,6 +76,6 @@ public class HungerBarScript : MonoBehaviour
     private void updateHealthAccordingToCurHunger()
     {
         hungerbar.fillAmount = currentHunger / maxHunger;
-        UpdateColor();
+        //UpdateColor();
     }
 }

@@ -24,7 +24,7 @@ public class playerScript : MonoBehaviour
     }
 
 
-    void ChangeSprite(string mode = "")
+    public void ChangeSprite(string mode = "")
     {
         if (mode.Equals("happy"))
             spriteRenderer.sprite = newSprite;
@@ -44,13 +44,19 @@ public class playerScript : MonoBehaviour
 
         if (statusBoardObject.GetFishAvailable() > 0)
         {
+            GameObject[] variableForFish = Resources.LoadAll<GameObject>("Prefabs\\fish");
             if (hunger < 100)
                 playerScript.hunger += Constants.FISH_HUNGER_FILL;
-            GameObject view = UtilityHelpers.showDamage(variableForPrefab[0], 1);
+
+            Instantiate(variableForFish[0]);
+            UtilityHelpers.showDamage(variableForPrefab[0], 1);
+
             statusBoardObject.SetFishEaten(statusBoardObject.GetFishEaten() + 1);
             statusBoardObject.SetFishAvailable(statusBoardObject.GetFishAvailable() - 1);
             if (HungerBarScript.currentHunger <= 98)
-                HungerBarScript.currentHunger += 2;
+                HungerBarScript.currentHunger += 4;
+
+
             ChangeSprite("happy");
         }
         else
