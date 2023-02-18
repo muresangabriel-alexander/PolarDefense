@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class WaterTowerScript : MonoBehaviour
 {
@@ -57,10 +59,25 @@ public class WaterTowerScript : MonoBehaviour
         {
             StartCoroutine(wait());
             cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
-            transform.GetChild(0).gameObject.SetActive(true);
+            StartCoroutine(spawnWater());
+           
+            //transform.GetChild(0).gameObject.SetActive(true);
             isFlooded = true;
             cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
         }
+    }
+
+    IEnumerator spawnWater()
+    {
+        GameObject water = transform.GetChild(0).gameObject;
+        Vector3 pos = water.transform.position;
+
+        water.transform.localScale = new Vector2(1,3);
+        water.transform.position = pos + new Vector3(0, 0.4f, 0);
+        water.SetActive(true);
+        yield return new WaitForSeconds(0.2f);
+        water.transform.position = pos;
+        water.transform.localScale = new Vector2(3, 4);
     }
 
     IEnumerator wait()
