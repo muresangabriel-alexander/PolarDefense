@@ -34,7 +34,7 @@ public class BuildWind : MonoBehaviour
     
     void OnMouseDown()
     {
-        PlatformLogic.existentMenuLocation.buildChosenTower(towerObject);
+        PlatformLogic.existentMenuLocation.BuildChosenTower(towerObject);
             
     }
 
