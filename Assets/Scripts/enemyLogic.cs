@@ -142,7 +142,7 @@ public class enemyLogic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<WaterScript>() != null)
+        if (collision.gameObject.tag == Constants.WATER)
         {
             inWater = true;
             speed = speed / 4;
@@ -150,7 +150,7 @@ public class enemyLogic : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<WaterScript>() != null)
+        if (collision.gameObject.CompareTag(Constants.WATER))
         {
             inWater = false;
             speed = speed * 4;

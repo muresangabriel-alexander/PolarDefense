@@ -46,7 +46,8 @@ public class WaterTowerScript : MonoBehaviour
             }
             else
             {
-                transform.GetChild(0).gameObject.SetActive(false);
+                StartCoroutine(removeWater());
+                //transform.GetChild(0).gameObject.SetActive(false);
                 isFlooded = false;
                 waterFloodedCountdown = Constants.WATER_FLOODING_TIME;
             }
@@ -57,11 +58,10 @@ public class WaterTowerScript : MonoBehaviour
     {
         if(canAttack)
         {
-            StartCoroutine(wait());
             cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
             StartCoroutine(spawnWater());
            
-            //transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).gameObject.SetActive(true);
             isFlooded = true;
             cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
         }
@@ -71,29 +71,29 @@ public class WaterTowerScript : MonoBehaviour
     {
         GameObject water = transform.GetChild(0).gameObject;
         Vector3 pos = water.transform.position;
+        for(int i = 0; i < 3; i++)
+        {
+            yield return new WaitForSeconds(0.03f);
+            water.transform.position -= new Vector3(0, 0.2f, 0);
+            water.transform.localScale += new Vector3(1, 1, 0);
+        }
 
-        water.transform.localScale = new Vector2(1,3);
-        water.transform.position = pos + new Vector3(0, 0.4f, 0);
-        water.SetActive(true);
-        yield return new WaitForSeconds(0.2f);
-        water.transform.position = pos;
-        water.transform.localScale = new Vector2(3, 4);
     }
 
-    IEnumerator wait()
+    IEnumerator removeWater()
     {
-        spriteRenderer.sprite = tower2;
-        yield return new WaitForSeconds(0.1f);
-        spriteRenderer.sprite = tower3;
-        yield return new WaitForSeconds(0.1f);
-        spriteRenderer.sprite = tower4;
-        yield return new WaitForSeconds(0.3f);
-        spriteRenderer.sprite = tower3;
-        yield return new WaitForSeconds(0.1f);
-        spriteRenderer.sprite = tower2;
-        yield return new WaitForSeconds(0.1f);
-        spriteRenderer.sprite = tower1;
+        GameObject water = transform.GetChild(0).gameObject;
+        Vector3 pos = water.transform.position;
+        for (int i = 0; i < 3; i++)
+        {
+            yield return new WaitForSeconds(0.03f);
+            water.transform.position += new Vector3(0, 0.2f, 0);
+            water.transform.localScale -= new Vector3(1, 1, 0);
+        }
+        yield return new WaitForSeconds(0.03f);
+        water.SetActive(false);
     }
+
 
     public bool canAttack
     {

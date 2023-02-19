@@ -19,6 +19,7 @@ TagManager:
   - Undefined
   - WATER_TOWER
   - PLATFORM_WATER
+  - WATER
   layers:
   - Default
   - TransparentFX
