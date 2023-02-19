@@ -10,4 +10,9 @@ public class DestroyOnAnimationEnd : MonoBehaviour
         GameObject parent = gameObject.transform.parent.gameObject;
         Destroy(parent);
     }
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
 }

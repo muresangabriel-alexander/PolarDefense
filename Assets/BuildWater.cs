@@ -34,7 +34,7 @@ public class BuildWater : MonoBehaviour
     
     void OnMouseDown()
     {
-        PlatformLogic.existentMenuLocation.buildChosenTower(towerObject);
+        PlatformLogic.existentMenuLocation.BuildChosenTower(towerObject);
             
     }
 

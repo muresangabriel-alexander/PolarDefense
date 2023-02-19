@@ -26,7 +26,7 @@ public class StatusBoard : MonoBehaviour
         statusBoardObject.SetCollectedScraps(0);
         statusBoardObject.SetDestroyedVehicles(0);
         statusBoardObject.SetFishEaten(0);
-        statusBoardObject.SetFishAvailable(0);
+        statusBoardObject.SetFishAvailable(Constants.START_FISH_AVAILABLE);
     }
 
     // Update is called once per frame
