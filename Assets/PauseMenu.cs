@@ -53,6 +53,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Loading StartMenu");
         GameIsPaused = false;
+        HungerBarScript.currentHunger = 100;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
