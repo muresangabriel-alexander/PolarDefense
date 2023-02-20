@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4601830859866322381}
   - component: {fileID: 5802058873831997427}
   - component: {fileID: 53765059}
-  - component: {fileID: 4066546679439008879}
+  - component: {fileID: 2141949515}
   m_Layer: 0
   m_Name: Water
   m_TagString: WATER
@@ -107,8 +107,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!58 &4066546679439008879
-CircleCollider2D:
+--- !u!70 &2141949515
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -120,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015242732, y: -1.543146}
-  serializedVersion: 2
-  m_Radius: 2.459295
+  m_Offset: {x: -0.011382489, y: 0.20071821}
+  m_Size: {x: 1.7106436, y: 0.90430117}
+  m_Direction: 1
 --- !u!1 &8046592067166337451
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5bab2a3eba48a438404693a9abccfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tower:
+  - {fileID: 21300000, guid: 20f38a566ad449f4a83962968d05aafd, type: 3}
+  - {fileID: 21300000, guid: 6b586f02d7890ef4c843001ef64a48ed, type: 3}
+  - {fileID: 21300000, guid: 774d0187d8b5ae446b20e7bed9e93011, type: 3}
+  - {fileID: 21300000, guid: ab0a8d256f5a6c5449fdeb16ebad233c, type: 3}
 --- !u!61 &7187008594857482649
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -23,7 +23,6 @@ public class enemyLogic : MonoBehaviour
     public int health = 0;
     private int enemypoints = 0;
 
-    private bool inWater = false;
     private float damageOverTimePeriod = 0;
 
 
@@ -126,7 +125,7 @@ public class enemyLogic : MonoBehaviour
         // health -= towerdamage;
         // StartCoroutine(wait());
         
-        if(damageOverTimePeriod > 0)
+        if(damageOverTimePeriod > 0f)
         {
             damageOverTimePeriod -= Time.deltaTime;
         }
@@ -144,18 +143,16 @@ public class enemyLogic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == Constants.WATER)
+        if (collision.tag == Constants.WATER)
         {
-            inWater = true;
             speed = speed / 4;
 
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Constants.WATER))
+        if (collision.CompareTag(Constants.WATER))
         {
-            inWater = false;
             speed = speed * 4;
         }
         
@@ -163,7 +160,7 @@ public class enemyLogic : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Constants.WATER)) { 
+        if (collision.CompareTag(Constants.WATER)) { 
             if (damageOverTimePeriod <= 0f)
             {
                 health -= 1;

@@ -7,16 +7,21 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 public class WaterTowerScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Sprite[] tower;
 
     private float cooldownTime;
     private float waterFloodedCountdown;
     private bool isFlooded;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = tower[0];
     }
     void Start()
     {
+        
         isFlooded = false;
         cooldownTime = 0.0f;
         waterFloodedCountdown = Constants.WATER_FLOODING_TIME;
@@ -39,7 +44,7 @@ public class WaterTowerScript : MonoBehaviour
             else
             {
                 StartCoroutine(removeWater());
-                //transform.GetChild(0).gameObject.SetActive(false);
+                StartCoroutine(emptyWaterTower());
                 isFlooded = false;
                 waterFloodedCountdown = Constants.WATER_FLOODING_TIME;
             }
@@ -48,12 +53,12 @@ public class WaterTowerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(canAttack && collision.tag != Constants.WATER)
+        if(canAttack && triggerIsEnemy(collision.tag))
         {
             cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
+            StartCoroutine(fillWaterTower());
             StartCoroutine(spawnWater());
             isFlooded = true;
-            //cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
         }
     }
 
@@ -85,6 +90,23 @@ public class WaterTowerScript : MonoBehaviour
         water.SetActive(false);
     }
 
+    IEnumerator fillWaterTower()
+    {
+        for (int i = 0; i < tower.Length; i++ )
+        {
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.sprite = tower[i];
+        }
+    }
+
+    IEnumerator emptyWaterTower()
+    {
+        for (int i = tower.Length - 1; i >= 0; i--)
+        {
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.sprite = tower[i];
+        }
+    }
 
     public bool canAttack
     {
@@ -92,5 +114,10 @@ public class WaterTowerScript : MonoBehaviour
         {
             return cooldownTime <= 0f && waterFloodedCountdown > 0f;
         }
+    }
+
+    public bool triggerIsEnemy(string tag)
+    {
+        return (tag == Constants.CRANE_TRUCK_ENEMY || tag == Constants.NORMAL_ENEMY || tag == Constants.TRUCK_ENEMY);
     }
 }

@@ -48,7 +48,7 @@ public class Constants : MonoBehaviour
     public static readonly float HUNGER_INCREASE_TIME = 6.0f;
 
 
-    public static readonly float WATER_TOWER_DAMAGE_OVER_TIME_PERIOD = 0.8f;
+    
 
     public enum EnemyType
     {
@@ -61,6 +61,7 @@ public class Constants : MonoBehaviour
     // water tower constants
     public static readonly float WATER_TOWER_FLOODING_RATE = 5.0f;
     public static readonly float WATER_FLOODING_TIME = 2.0f;
+    public static readonly float WATER_TOWER_DAMAGE_OVER_TIME_PERIOD = 0.9f;
 
 
 }
