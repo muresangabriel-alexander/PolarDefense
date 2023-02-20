@@ -33,7 +33,6 @@ public class HungerBarScript : MonoBehaviour
         {
             currentHunger-= 2;
             timer = 0.0f;
-            Debug.Log(currentHunger);
         }
         else
         {

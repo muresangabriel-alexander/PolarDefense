@@ -18,6 +18,8 @@ public class Constants : MonoBehaviour
     public static readonly string CRANE_TRUCK_ENEMY = "CRANE_TRUCK_ENEMY"; 
 
 
+    // Tower constants
+    public static readonly float SOLAR_FIRE_FREQUENCY = 1.0f;
 
     // Enemy constants
     public static readonly float NORMAL_ENEMY_SPEED = 2.0f;
