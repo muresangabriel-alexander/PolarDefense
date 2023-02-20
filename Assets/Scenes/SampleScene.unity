@@ -10936,11 +10936,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2599946970108006572, guid: 506b90538ccd58c4d82506238f65cc4e,
-        type: 3}
-      propertyPath: m_TagString
-      value: WATER
-      objectReference: {fileID: 0}
     - target: {fileID: 8046592067166337449, guid: 506b90538ccd58c4d82506238f65cc4e,
         type: 3}
       propertyPath: m_RootOrder
@@ -11001,8 +10996,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterTower
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8249240038406009165, guid: 506b90538ccd58c4d82506238f65cc4e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 506b90538ccd58c4d82506238f65cc4e, type: 3}
 --- !u!1001 &8564854443294308437
 PrefabInstance:

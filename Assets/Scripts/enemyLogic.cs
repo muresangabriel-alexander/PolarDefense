@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.IO;
 
 public class enemyLogic : MonoBehaviour
 {
@@ -19,15 +20,17 @@ public class enemyLogic : MonoBehaviour
 
     private float speed = 0.0f;
     private int damage = 0;
-    public float health = 0;
+    public int health = 0;
     private int enemypoints = 0;
 
     private bool inWater = false;
+    private float damageOverTimePeriod = 0;
 
 
     void Start()
     {
         initEnemyStats();
+        damageOverTimePeriod = 0;
     }
 
     private void initEnemyStats()
@@ -122,12 +125,11 @@ public class enemyLogic : MonoBehaviour
         // TODO decrease enemy health once fire projectiles are here 
         // health -= towerdamage;
         // StartCoroutine(wait());
-        if (inWater)
-        {
-            health -= 0.1f;
-            StartCoroutine(wait());
-        }
         
+        if(damageOverTimePeriod > 0)
+        {
+            damageOverTimePeriod -= Time.deltaTime;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -146,6 +148,7 @@ public class enemyLogic : MonoBehaviour
         {
             inWater = true;
             speed = speed / 4;
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -155,6 +158,18 @@ public class enemyLogic : MonoBehaviour
             inWater = false;
             speed = speed * 4;
         }
+        
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag(Constants.WATER)) { 
+            if (damageOverTimePeriod <= 0f)
+            {
+                health -= 1;
+                damageOverTimePeriod = Constants.WATER_TOWER_DAMAGE_OVER_TIME_PERIOD;
+                StartCoroutine(wait());
+            }
+        }
+    }
 }
