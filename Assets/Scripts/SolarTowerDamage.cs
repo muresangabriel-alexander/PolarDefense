@@ -33,9 +33,11 @@ public class SolarTowerDamage : MonoBehaviour
                 // shooting projectile in ProjectileLogic.cs
                 var currentSolarTower = gameObject;
                 GameObject solarBeamPrefab = Resources.LoadAll<GameObject>("Prefabs\\SolarBeam")[0];
-                Instantiate(solarBeamPrefab);
-                
+                var solarBeamClone = Instantiate(solarBeamPrefab, transform.position, transform.rotation);
+                // solarBeamClone.transform.position = gameObject.transform.position;
+
                 // TODO projectile should start from right position (currentSolarTower)
+                // TODO every solar tower should have its own projectiles separately
             }
             else
             {
@@ -58,7 +60,7 @@ public class SolarTowerDamage : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (targetEnemy == null)
+        if (targetEnemy == null && !other.CompareTag("SOLAR_PROJECTILE"))
         {
             targetEnemy = other.gameObject;
         }
