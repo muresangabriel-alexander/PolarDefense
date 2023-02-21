@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class playerScript : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class playerScript : MonoBehaviour
     [SerializeField]
     private StatusBoardSO statusBoardObject;
     public static int hunger = 100;
+    [SerializeField]
+    private HighscoreScriptable highscoreObject; 
 
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
@@ -72,7 +75,10 @@ public class playerScript : MonoBehaviour
     void Update()
     {
         if (HealthBarScript.currentHealth <= 0)
+        {
             Destroy(gameObject);
+            SceneManager.LoadScene("FinalScene");
+        }
     }
 
     private void FixedUpdate()
@@ -100,6 +106,10 @@ public class playerScript : MonoBehaviour
 
     private void OnDestroy()
     {
-        // TODO exit game here
+        if(statusBoardObject.GetDestroyedVehicles() > highscoreObject.Highscore)
+        {
+            highscoreObject.Highscore = statusBoardObject.GetDestroyedVehicles();
+        }
+        highscoreObject.CurrentScore = statusBoardObject.GetDestroyedVehicles();
     }
 }
