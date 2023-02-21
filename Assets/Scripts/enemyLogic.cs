@@ -17,14 +17,13 @@ public class enemyLogic : MonoBehaviour
 
     private float speed = 0.0f;
     private int damage = 0;
-    private int health = 0;
+    public int health = 0;
     private int enemypoints = 0;
 
 
     void Start()
     {
         initEnemyStats();
-        // gameObject.GetComponent<enemyLogic>().health--;
 
     }
     private void initEnemyStats()
