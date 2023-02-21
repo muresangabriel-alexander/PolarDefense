@@ -12,7 +12,6 @@ public class EnemySpawner : MonoBehaviour
     public Vector3 initSpawnPointTruck= new Vector3(-9.94f, -4.36f, 0);
     public Vector3 initSpawnPointCraneTruck= new Vector3(-9.94f, -4.384295f, 0);
     public List<Constants.EnemyType> enemySpawnProbabilty = new List<Constants.EnemyType>();
-    public static List<GameObject> allEnemies = new List<GameObject>();
     private float timer = 15.0f;
 
     [SerializeField]
@@ -59,13 +58,13 @@ public class EnemySpawner : MonoBehaviour
             switch (enemySpawnProbabilty[rand_num])
             {
                 case Constants.EnemyType.NORMAL_ENEMY:
-                    allEnemies.Add(Instantiate(NormalEnemy, initSpawnPointNormal, NormalEnemy.transform.rotation));
+                    Instantiate(NormalEnemy, initSpawnPointNormal, NormalEnemy.transform.rotation);
                     break;
                 case Constants.EnemyType.TRUCK_ENEMY:
-                    allEnemies.Add(Instantiate(TruckEnemy, initSpawnPointTruck, TruckEnemy.transform.rotation));
+                    Instantiate(TruckEnemy, initSpawnPointTruck, TruckEnemy.transform.rotation);
                     break;
                 case Constants.EnemyType.CRANE_TRUCK_ENEMY:
-                    allEnemies.Add(Instantiate(CraneTruckEnemy, initSpawnPointCraneTruck, CraneTruckEnemy.transform.rotation));
+                    Instantiate(CraneTruckEnemy, initSpawnPointCraneTruck, CraneTruckEnemy.transform.rotation);
                     break;
             }
         }

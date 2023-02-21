@@ -128,13 +128,4 @@ public class enemyLogic : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnDestroy()
-    {
-        foreach(var enemy in EnemySpawner.allEnemies)
-        {
-            if (enemy == gameObject)
-                EnemySpawner.allEnemies.Remove(enemy);
-        }
-    }
 }
