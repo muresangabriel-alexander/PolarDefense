@@ -98,5 +98,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  sadSprite: {fileID: 21300000, guid: dcb9df39610aa7c459f0a6987cb46547, type: 3}

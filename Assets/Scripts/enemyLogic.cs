@@ -24,8 +24,9 @@ public class enemyLogic : MonoBehaviour
     void Start()
     {
         initEnemyStats();
-    }
+        // gameObject.GetComponent<enemyLogic>().health--;
 
+    }
     private void initEnemyStats()
     {
         if (gameObject.tag == Constants.NORMAL_ENEMY)
@@ -49,7 +50,6 @@ public class enemyLogic : MonoBehaviour
             health = Constants.CRANE_TRUCK_ENEMY_HEALTH;
             enemypoints = Constants.CRANE_TRUCK_ENEMY_POINTS;
         }
-
     }
 
     private float calculateDistance(Transform transformCar, Transform transformWaypoint)
@@ -127,6 +127,15 @@ public class enemyLogic : MonoBehaviour
             // TODO increase status board counter of defeated enemies
             // statusboard_enemies_defeated += enemypoints;
             Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        foreach(var enemy in EnemySpawner.allEnemies)
+        {
+            if (enemy == gameObject)
+                EnemySpawner.allEnemies.Remove(enemy);
         }
     }
 }
