@@ -7749,7 +7749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -296, y: -27.460007}
+  m_AnchoredPosition: {x: -296, y: -27.460022}
   m_SizeDelta: {x: 189.78003, y: 16.800003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533268791
@@ -9257,7 +9257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7add9adee8c59ed4f9cd28c315fca861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: 4dd020ee9dfb8a04a87b9dd86febd9d3, type: 3}
+  cursor: {fileID: 2800000, guid: b11588ee487750f4586611944b95f278, type: 3}
   statusBoardObject: {fileID: 11400000, guid: dab9e4d201bec5f47b2116a6ad32dd3f, type: 2}
   spriteRenderer: {fileID: 1723042043}
   newSprite: {fileID: 21300000, guid: 92d04643508368c4ebf098acbc915bda, type: 3}
@@ -10647,7 +10647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00033569336, y: 88}
+  m_AnchoredPosition: {x: 0.00036621094, y: 88}
   m_SizeDelta: {x: -633.6996, y: -491.5094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998236642

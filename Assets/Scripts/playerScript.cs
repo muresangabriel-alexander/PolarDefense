@@ -36,7 +36,12 @@ public class playerScript : MonoBehaviour
 
     private void OnMouseOver()
     {
-        //Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+    }
+
+    private void OnMouseExit()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
     void OnMouseDown()
     {
