@@ -22,6 +22,9 @@ public class enemyLogic : MonoBehaviour
     private int damage = 0;
     public int health = 0;
     private int enemypoints = 0;
+    [SerializeField]
+    private StatusBoardSO statusBoardObject;
+
 
     private float damageOverTimePeriod = 0;
 
@@ -29,6 +32,7 @@ public class enemyLogic : MonoBehaviour
     void Start()
     {
         initEnemyStats();
+        
         damageOverTimePeriod = 0;
     }
 
@@ -55,7 +59,6 @@ public class enemyLogic : MonoBehaviour
             health = Constants.CRANE_TRUCK_ENEMY_HEALTH;
             enemypoints = Constants.CRANE_TRUCK_ENEMY_POINTS;
         }
-
     }
 
     private float calculateDistance(Transform transformCar, Transform transformWaypoint)
@@ -121,10 +124,6 @@ public class enemyLogic : MonoBehaviour
             currentTargetCounter++;
         }
 
-        // TODO decrease enemy health once fire projectiles are here 
-        // health -= towerdamage;
-        // StartCoroutine(wait());
-        
         if(damageOverTimePeriod > 0f)
         {
             damageOverTimePeriod -= Time.deltaTime;
@@ -135,6 +134,7 @@ public class enemyLogic : MonoBehaviour
     {
         if (health <= 0)
         {
+            // statusBoardObject.InCreaseDestroyedVehicles();
             // TODO increase status board counter of defeated enemies
             // statusboard_enemies_defeated += enemypoints;
             Destroy(gameObject);
@@ -168,5 +168,10 @@ public class enemyLogic : MonoBehaviour
                 StartCoroutine(wait());
             }
         }
+    }
+    
+    private void OnDestroy()
+    {
+        EnemySpawner.allEnemies.Remove(gameObject);
     }
 }

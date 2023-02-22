@@ -149,3 +149,4 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+  statusBoardObject: {fileID: 11400000, guid: dab9e4d201bec5f47b2116a6ad32dd3f, type: 2}
