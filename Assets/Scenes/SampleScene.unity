@@ -2141,6 +2141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 5150945508775764124, guid: f7257cf849521f04bac9ed9df59c4616,
+        type: 3}
+      propertyPath: m_TagString
+      value: PLATFORM_WATER
+      objectReference: {fileID: 0}
     - target: {fileID: 5150945508775764127, guid: f7257cf849521f04bac9ed9df59c4616,
         type: 3}
       propertyPath: m_RootOrder
@@ -2601,6 +2606,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: platform (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150945508775764124, guid: f7257cf849521f04bac9ed9df59c4616,
+        type: 3}
+      propertyPath: m_TagString
+      value: PLATFORM_WATER
       objectReference: {fileID: 0}
     - target: {fileID: 5150945508775764127, guid: f7257cf849521f04bac9ed9df59c4616,
         type: 3}
@@ -3417,6 +3427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5150945508775764124, guid: f7257cf849521f04bac9ed9df59c4616,
+        type: 3}
+      propertyPath: m_TagString
+      value: PLATFORM_WATER
+      objectReference: {fileID: 0}
     - target: {fileID: 5150945508775764127, guid: f7257cf849521f04bac9ed9df59c4616,
         type: 3}
       propertyPath: m_RootOrder
@@ -3791,6 +3806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: platform (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150945508775764124, guid: f7257cf849521f04bac9ed9df59c4616,
+        type: 3}
+      propertyPath: m_TagString
+      value: PLATFORM_WATER
       objectReference: {fileID: 0}
     - target: {fileID: 5150945508775764127, guid: f7257cf849521f04bac9ed9df59c4616,
         type: 3}
@@ -7491,6 +7511,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5150945508775764124, guid: f7257cf849521f04bac9ed9df59c4616,
+        type: 3}
+      propertyPath: m_TagString
+      value: PLATFORM_WATER
+      objectReference: {fileID: 0}
     - target: {fileID: 5150945508775764127, guid: f7257cf849521f04bac9ed9df59c4616,
         type: 3}
       propertyPath: m_RootOrder
@@ -9829,6 +9854,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5150945508775764124, guid: f7257cf849521f04bac9ed9df59c4616,
+        type: 3}
+      propertyPath: m_TagString
+      value: PLATFORM_WATER
+      objectReference: {fileID: 0}
     - target: {fileID: 5150945508775764127, guid: f7257cf849521f04bac9ed9df59c4616,
         type: 3}
       propertyPath: m_RootOrder
@@ -10823,11 +10853,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8046592067166337448, guid: 506b90538ccd58c4d82506238f65cc4e,
-        type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8046592067166337449, guid: 506b90538ccd58c4d82506238f65cc4e,
         type: 3}
       propertyPath: m_RootOrder

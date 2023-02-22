@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.IO;
 
 public class enemyLogic : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public GameObject target;
+    public bool isEnemy = true;
+
     private int currentTargetCounter = 0;
     private bool targetFlipHandled = false;
 
@@ -23,12 +26,16 @@ public class enemyLogic : MonoBehaviour
     private StatusBoardSO statusBoardObject;
 
 
+    private float damageOverTimePeriod = 0;
+
 
     void Start()
     {
         initEnemyStats();
-
+        
+        damageOverTimePeriod = 0;
     }
+
     private void initEnemyStats()
     {
         if (gameObject.tag == Constants.NORMAL_ENEMY)
@@ -117,22 +124,52 @@ public class enemyLogic : MonoBehaviour
             currentTargetCounter++;
         }
 
-        // TODO decrease enemy health once fire projectiles are here 
-        // health -= towerdamage;
-        // StartCoroutine(wait());
+        if(damageOverTimePeriod > 0f)
+        {
+            damageOverTimePeriod -= Time.deltaTime;
+        }
     }
     // Update is called once per frame
     void Update()
     {
         if (health <= 0)
         {
-            statusBoardObject.InCreaseDestroyedVehicles();
+            // statusBoardObject.InCreaseDestroyedVehicles();
             // TODO increase status board counter of defeated enemies
             // statusboard_enemies_defeated += enemypoints;
             Destroy(gameObject);
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == Constants.WATER)
+        {
+            speed = speed / 4;
+
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag(Constants.WATER))
+        {
+            speed = speed * 4;
+        }
+        
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag(Constants.WATER)) { 
+            if (damageOverTimePeriod <= 0f)
+            {
+                health -= 1;
+                damageOverTimePeriod = Constants.WATER_TOWER_DAMAGE_OVER_TIME_PERIOD;
+                StartCoroutine(wait());
+            }
+        }
+    }
+    
     private void OnDestroy()
     {
         EnemySpawner.allEnemies.Remove(gameObject);

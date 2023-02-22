@@ -23,7 +23,8 @@ public class BuildWater : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        sprite.sprite = hoveredOver;
+        if (PlatformLogic.existentMenuLocation.getPlatformTag() == Constants.PLATFORM_WATER)
+            sprite.sprite = hoveredOver;
         
     }
 
@@ -34,8 +35,10 @@ public class BuildWater : MonoBehaviour
     
     void OnMouseDown()
     {
-        PlatformLogic.existentMenuLocation.BuildChosenTower(towerObject);
-            
+        if (PlatformLogic.existentMenuLocation.getPlatformTag() == Constants.PLATFORM_WATER)
+        {
+            PlatformLogic.existentMenuLocation.BuildChosenTower(towerObject);
+        }
     }
 
     // Update is called once per frame
