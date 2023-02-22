@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1701485003
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ace50ada7d3acb84ebb083ab52b2dff2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,6 +133,7 @@ MonoBehaviour:
   hoveredOver: {fileID: 21300000, guid: 0418cb186de53d244a54ebfb35c44a76, type: 3}
   towerObject: {fileID: 8046592067166337451, guid: 506b90538ccd58c4d82506238f65cc4e,
     type: 3}
+  platform: {fileID: 0}
 --- !u!1 &1014979787912811865
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +207,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1701485003
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 64f6e3ca42bae224aae5d1a508e35d52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -234,6 +235,7 @@ MonoBehaviour:
   hoveredOver: {fileID: 21300000, guid: 56b16265571349a40a5ada6f99172fda, type: 3}
   towerObject: {fileID: 8880943965223154862, guid: 7f5782a5ebbb72245b886dedae48954d,
     type: 3}
+  platform: {fileID: 0}
 --- !u!60 &1014979787912811867
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -341,7 +343,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1701485003
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 473ec9496563e2a4b853c24319f89db8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -400,8 +402,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoveredOver: {fileID: 21300000, guid: e0c7713662931fb4c9873127be1fb8c7, type: 3}
-  towerObject: {fileID: 8564854443541537914, guid: dde0d293077ee8f47aa1c75056c9bd7e,
+  towerObject: {fileID: 2287037629124981896, guid: dde0d293077ee8f47aa1c75056c9bd7e,
     type: 3}
+  platform: {fileID: 0}
 --- !u!1 &1014979788696725852
 GameObject:
   m_ObjectHideFlags: 0

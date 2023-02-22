@@ -59,6 +59,9 @@ TagManager:
   - name: Actors
     uniqueID: 4038615833
     locked: 0
+  - name: Actor-Foreground
+    uniqueID: 95390357
+    locked: 0
   - name: BG
     uniqueID: 45497431
     locked: 0
