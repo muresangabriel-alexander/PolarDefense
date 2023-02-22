@@ -22,20 +22,21 @@ public class Constants : MonoBehaviour
     // Enemy constants
     public static readonly float NORMAL_ENEMY_SPEED = 2.0f;
     public static readonly int NORMAL_ENEMY_DAMAGE = 3;
-    public static readonly int NORMAL_ENEMY_HEALTH = 10;
+    public static readonly int NORMAL_ENEMY_HEALTH = 10 + (5 * EnemySpawner.waveNum);
     public static readonly int NORMAL_ENEMY_POINTS = 1;
 
-    public static readonly float TRUCK_ENEMY_SPEED = 1.0f;
+    public static readonly float TRUCK_ENEMY_SPEED = 1.0f + (0.05f * EnemySpawner.waveNum);
     public static readonly int TRUCK_ENEMY_DAMAGE = 6;
-    public static readonly int TRUCK_ENEMY_HEALTH = 20;
+    public static readonly int TRUCK_ENEMY_HEALTH = 20 + (5 * EnemySpawner.waveNum);
     public static readonly int TRUCK_ENEMY_POINTS = 2;
 
-    public static readonly float CRANE_TRUCK_ENEMY_SPEED = 0.5f;
+    public static readonly float CRANE_TRUCK_ENEMY_SPEED = 0.5f + (0.05f * EnemySpawner.waveNum);
     public static readonly int CRANE_TRUCK_ENEMY_DAMAGE = 10;
-    public static readonly int CRANE_TRUCK_ENEMY_HEALTH = 30;
+    public static readonly int CRANE_TRUCK_ENEMY_HEALTH = 30 + (5*EnemySpawner.waveNum);
     public static readonly int CRANE_TRUCK_ENEMY_POINTS = 3;
 
-    public static readonly float ENEMY_SPAWN_RATE = 8.0f;
+    public static float ENEMY_SPAWN_RATE = 8.0f;
+    public static float WAIT_AFTER_WAVE = 10.0f;
 
     public static readonly int FISH_HUNGER_FILL = 2;
     public static readonly float FISH_REFRESH_RATE = 15.0f;
