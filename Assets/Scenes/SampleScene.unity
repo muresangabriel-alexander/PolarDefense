@@ -9172,7 +9172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7add9adee8c59ed4f9cd28c315fca861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: 4dd020ee9dfb8a04a87b9dd86febd9d3, type: 3}
+  cursor: {fileID: 2800000, guid: b11588ee487750f4586611944b95f278, type: 3}
   statusBoardObject: {fileID: 11400000, guid: dab9e4d201bec5f47b2116a6ad32dd3f, type: 2}
   highscoreObject: {fileID: 11400000, guid: 1aee738a0d108b941b358cfffcd3004c, type: 2}
   spriteRenderer: {fileID: 1723042043}
