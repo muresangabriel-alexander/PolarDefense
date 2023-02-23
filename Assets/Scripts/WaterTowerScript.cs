@@ -14,10 +14,12 @@ public class WaterTowerScript : MonoBehaviour
     private bool isFlooded;
     private SpriteRenderer spriteRenderer;
 
+    private float timeBetweenToFillTower = (Constants.WATER_TOWER_FLOODING_RATE - Constants.WATER_FLOODING_TIME) / 3;
+
     private void Awake()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = tower[0];
+        spriteRenderer.sprite = tower[3];
     }
     void Start()
     {
@@ -44,7 +46,7 @@ public class WaterTowerScript : MonoBehaviour
             else
             {
                 StartCoroutine(removeWater());
-                StartCoroutine(emptyWaterTower());
+                StartCoroutine(fillWaterTower());
                 isFlooded = false;
                 waterFloodedCountdown = Constants.WATER_FLOODING_TIME;
             }
@@ -56,8 +58,8 @@ public class WaterTowerScript : MonoBehaviour
         if(canAttack && triggerIsEnemy(collision.tag))
         {
             cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
-            StartCoroutine(fillWaterTower());
             StartCoroutine(spawnWater());
+            StartCoroutine(emptyWaterTower());
             isFlooded = true;
         }
     }
@@ -69,9 +71,9 @@ public class WaterTowerScript : MonoBehaviour
         Vector3 pos = water.transform.position;
         for(int i = 0; i < 3; i++)
         {
-            yield return new WaitForSeconds(1);
-            water.transform.position -= new Vector3(0, 0.15f, 0);
-            water.transform.localScale += new Vector3(1, 1, 0);
+            yield return new WaitForSeconds(0.03f);
+            water.transform.position -= new Vector3(0, 0.1f, 0);
+            water.transform.localScale += new Vector3(0.8f, 0.8f, 0);
         }
 
     }
@@ -83,8 +85,8 @@ public class WaterTowerScript : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             yield return new WaitForSeconds(0.03f);
-            water.transform.position += new Vector3(0, 0.15f, 0);
-            water.transform.localScale -= new Vector3(1, 1, 0);
+            water.transform.position += new Vector3(0, 0.1f, 0);
+            water.transform.localScale -= new Vector3(0.8f, 0.8f, 0);
         }
         yield return new WaitForSeconds(0.03f);
         water.SetActive(false);
@@ -92,9 +94,9 @@ public class WaterTowerScript : MonoBehaviour
 
     IEnumerator fillWaterTower()
     {
-        for (int i = 0; i < tower.Length; i++ )
+        for (int i = 1; i < tower.Length; i++ )
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(timeBetweenToFillTower);
             spriteRenderer.sprite = tower[i];
         }
     }

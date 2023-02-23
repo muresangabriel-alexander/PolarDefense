@@ -10,15 +10,15 @@ public class BuildWater : MonoBehaviour
     public GameObject towerObject;
     public GameObject platform;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
         defaultSprite = GetComponent<SpriteRenderer>().sprite;
+    }
+
+    void Start()
+    {
+        
     }
 
     public void OnMouseEnter()
