@@ -55,7 +55,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         HungerBarScript.currentHunger = 100;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("StartMenu");
     }
     
     public void QuitGame()
