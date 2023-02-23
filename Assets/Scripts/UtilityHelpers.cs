@@ -32,9 +32,4 @@ public class UtilityHelpers : MonoBehaviour
 
         return view;
     }
-
-    public static void DecreaseEnemyhealth(GameObject enemy, int damage)
-    {
-        enemy.GetComponent<enemyLogic>().health -= damage;
-    }
 }

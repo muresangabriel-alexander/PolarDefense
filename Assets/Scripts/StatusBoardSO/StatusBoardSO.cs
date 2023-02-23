@@ -27,11 +27,6 @@ public class StatusBoardSO : ScriptableObject
     { 
         spawnedVehicles = value; 
     }
-
-    public void InCreaseSpawnedVehicles()
-    {
-        spawnedVehicles++;
-    }
     public void ChangeSpawnedVehiclesBy(int value)
     {
         spawnedVehicles += value;
@@ -44,11 +39,6 @@ public class StatusBoardSO : ScriptableObject
     public void SetDestroyedVehicles(int value)
     { 
         destroyedVehicles = value; 
-    }
-
-    public void InCreaseDestroyedVehicles()
-    {
-        destroyedVehicles++;
     }
     public void ChangeDestroyedVehiclesBy(int value)
     {

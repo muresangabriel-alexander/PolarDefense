@@ -35,7 +35,7 @@ public class StatusBoard : MonoBehaviour
         string destroyedVehiclesText = "Vehicles destroyed: " + statusBoardObject.GetDestroyedVehicles();
         destroyedVehiclesTextField.GetComponent<TMPro.TextMeshProUGUI>().text = destroyedVehiclesText;
 
-        string spawnedVehiclesText = "Vehicles spawned: " + statusBoardObject.GetSpawnedVehicles();
+        string spawnedVehiclesText = "Vehicles spawned: " + statusBoardObject.GetSpawnedVehicles() + "/" + statusBoardObject.GetTotalAmountOfVehiclesInWave();
         spawnedVehiclesTextField.GetComponent<TMPro.TextMeshProUGUI>().text = spawnedVehiclesText;
 
         string collectedScrapsText = "Scraps collected: " + statusBoardObject.GetCollectedScraps();

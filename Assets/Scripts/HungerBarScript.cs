@@ -17,7 +17,6 @@ public class HungerBarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHunger = 100;
         hungerbar.color = StartColor;
     }
 

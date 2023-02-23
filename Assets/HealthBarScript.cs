@@ -21,7 +21,6 @@ public class HealthBarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = 100;
         healthBar.color = Color.green;
     }
 
