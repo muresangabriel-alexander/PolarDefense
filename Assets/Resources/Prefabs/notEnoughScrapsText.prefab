@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6455067914263415945}
   - component: {fileID: 6455067914263415946}
   m_Layer: 5
-  m_Name: dmg
+  m_Name: notEnoughScraps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.11, y: 0.68}
-  m_SizeDelta: {x: 0.9247, y: 0.7674}
+  m_AnchoredPosition: {x: 0.056, y: -0.18705}
+  m_SizeDelta: {x: 1, y: 0.7674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6455067914263415947
 CanvasRenderer:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: Not enough Scraps!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.53
-  m_fontSizeBase: 0.53
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -0.87763035, y: 0, z: -0.8833921, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 6455067914922403744}
   - component: {fileID: 6455067914922403745}
   m_Layer: 5
-  m_Name: damageText
+  m_Name: notEnoughScrapsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,10 +204,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.21368408, y: 2.6618958}
-  m_SizeDelta: {x: 1.9752, y: 1.1415}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -413.40506, y: -229.42902}
+  m_SizeDelta: {x: 2.7, y: 1.1414948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6455067914922403747
 Canvas:
@@ -227,7 +227,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1701485003
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &6455067914922403744

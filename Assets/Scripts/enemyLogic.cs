@@ -22,6 +22,7 @@ public class enemyLogic : MonoBehaviour
     private int damage = 0;
     public int health = 0;
     private int enemypoints = 0;
+
     [SerializeField]
     private StatusBoardSO statusBoardObject;
 
@@ -134,9 +135,21 @@ public class enemyLogic : MonoBehaviour
     {
         if (health <= 0)
         {
-            // statusBoardObject.InCreaseDestroyedVehicles();
-            // TODO increase status board counter of defeated enemies
-            // statusboard_enemies_defeated += enemypoints;
+            statusBoardObject.InCreaseDestroyedVehicles();
+            // TODO increase scraps count
+            if (gameObject.tag == Constants.NORMAL_ENEMY)
+            {
+                statusBoardObject.ChangeCollectedScrapsBy(Constants.NORMAL_ENEMY_SCRAPS);
+            }
+            else if (gameObject.tag == Constants.TRUCK_ENEMY)
+            {
+                statusBoardObject.ChangeCollectedScrapsBy(Constants.TRUCK_ENEMY_SCRAPS);
+            }
+            else if( gameObject.tag == Constants.CRANE_TRUCK_ENEMY)
+            {
+                statusBoardObject.ChangeCollectedScrapsBy(Constants.CRANE_TRUCK_SCRAPS);
+            }
+
             Destroy(gameObject);
         }
     }

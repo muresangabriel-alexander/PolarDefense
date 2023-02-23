@@ -20,10 +20,10 @@ public class StatusBoard : MonoBehaviour
     TextMeshProUGUI fishEatenTextField;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         statusBoardObject.SetSpawnedVehicles(0);
-        statusBoardObject.SetCollectedScraps(0);
+        statusBoardObject.SetCollectedScraps(20);
         statusBoardObject.SetDestroyedVehicles(0);
         statusBoardObject.SetFishEaten(0);
         statusBoardObject.SetFishAvailable(Constants.START_FISH_AVAILABLE);
