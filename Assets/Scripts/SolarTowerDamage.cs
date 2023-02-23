@@ -16,7 +16,7 @@ public class SolarTowerDamage : MonoBehaviour
                 // shooting projectile in ProjectileLogic.cs
                 GameObject solarBeamPrefab = Resources.LoadAll<GameObject>("Prefabs\\SolarBeam")[0];
                 
-                GameObject solarBeamClone = Instantiate(solarBeamPrefab, transform.position, transform.rotation);
+                GameObject solarBeamClone = Instantiate(solarBeamPrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -2.0f), transform.rotation);
                 solarBeamClone.GetComponent<ProjectileLogic>().solarTower = gameObject;
             }
             else
