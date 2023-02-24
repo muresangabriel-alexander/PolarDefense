@@ -16,6 +16,11 @@ TagManager:
   - CRANE_TRUCK_ENEMY
   - TRUCK_ENEMY
   - CURVE_MIDDLE
+  - Undefined
+  - WATER_TOWER
+  - PLATFORM_WATER
+  - WATER
+  - WIND
   layers:
   - Default
   - TransparentFX

@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using System.IO;
 
 public class enemyLogic : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public GameObject target;
+    public bool isEnemy = true;
+
     private int currentTargetCounter = 0;
     private bool targetFlipHandled = false;
 
@@ -16,13 +20,23 @@ public class enemyLogic : MonoBehaviour
 
     private float speed = 0.0f;
     private int damage = 0;
-    private int health = 0;
+    public int health = 0;
     private int enemypoints = 0;
+    [SerializeField]
+    private StatusBoardSO statusBoardObject;
+
+
+    private float damageOverTimePeriod = 0;
+    private float damageOverTimePeriod_wind = 0;
 
 
     void Start()
     {
         initEnemyStats();
+        
+        damageOverTimePeriod = 0;
+        damageOverTimePeriod_wind = 0;
+
     }
 
     private void initEnemyStats()
@@ -48,7 +62,6 @@ public class enemyLogic : MonoBehaviour
             health = Constants.CRANE_TRUCK_ENEMY_HEALTH;
             enemypoints = Constants.CRANE_TRUCK_ENEMY_POINTS;
         }
-
     }
 
     private float calculateDistance(Transform transformCar, Transform transformWaypoint)
@@ -79,6 +92,17 @@ public class enemyLogic : MonoBehaviour
         //renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, renderer.color.a - 0.1f);
         renderer.enabled = !renderer.enabled;
     }
+    
+    IEnumerator wait_wind()
+    {
+        SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
+        renderer.enabled = !renderer.enabled;
+        yield return new WaitForSeconds(0.2f);
+        //renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, renderer.color.a - 0.1f);
+        //renderer.color = new Color(0.9f, renderer.color.g, renderer.color.b, renderer.color.a);
+
+        renderer.enabled = !renderer.enabled;
+    }
 
     private void FixedUpdate()
     {
@@ -103,10 +127,8 @@ public class enemyLogic : MonoBehaviour
             {
                 // TODO decrease player health once player scripts are there
                 // player_health -= damage;
-
-
                 GameObject[] variableForPrefab = Resources.LoadAll<GameObject>("Prefabs\\damageText");
-                playerScript.health -= damage;
+                HealthBarScript.currentHealth -= damage;
                 GameObject view = UtilityHelpers.showDamage(variableForPrefab[0], -damage);
                 Destroy(gameObject);
                 Debug.Log("Still running");
@@ -116,18 +138,69 @@ public class enemyLogic : MonoBehaviour
             currentTargetCounter++;
         }
 
-        // TODO decrease enemy health once fire projectiles are here 
-        // health -= towerdamage;
-        // StartCoroutine(wait());
+        if(damageOverTimePeriod > 0f)
+        {
+            damageOverTimePeriod -= Time.deltaTime;
+        }
+        
+        if(damageOverTimePeriod_wind > 0f)
+        {
+            damageOverTimePeriod_wind -= Time.deltaTime;
+        }
     }
     // Update is called once per frame
     void Update()
     {
         if (health <= 0)
         {
+            // statusBoardObject.InCreaseDestroyedVehicles();
             // TODO increase status board counter of defeated enemies
             // statusboard_enemies_defeated += enemypoints;
             Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == Constants.WATER)
+        {
+            speed = speed / 4;
+
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag(Constants.WATER))
+        {
+            speed = speed * 4;
+        }
+        
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag(Constants.WATER)) { 
+            if (damageOverTimePeriod <= 0f)
+            {
+                health -= 1;
+                damageOverTimePeriod = Constants.WATER_TOWER_DAMAGE_OVER_TIME_PERIOD;
+                StartCoroutine(wait());
+            }
+        }
+        
+        if (collision.CompareTag(Constants.WIND)) { 
+            if (damageOverTimePeriod_wind <= 0f)
+            {
+                Debug.Log("WINDY up in here " + health.ToString());
+                health -= 2;
+                damageOverTimePeriod_wind = Constants.WIND_TOWER_DAMAGE_OVER_TIME_PERIOD;
+                StartCoroutine(wait_wind());
+            }
+        }
+    }
+    
+    private void OnDestroy()
+    {
+        EnemySpawner.allEnemies.Remove(gameObject);
     }
 }

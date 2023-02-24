@@ -61,9 +61,11 @@ public class PlatformLogic : MonoBehaviour
         }
     }
     
-    public void buildChosenTower(GameObject tower)
+    public void BuildChosenTower(GameObject tower)
     {
-        
+        if (builtTower != null)
+            Destroy(builtTower);
+
         builtTower = Instantiate(tower, transform.position +  new Vector3(0f,0.25f,0f), Quaternion.identity);
         if (isMenuUp && existentMenuLocation ==  this)
         {
@@ -72,6 +74,7 @@ public class PlatformLogic : MonoBehaviour
             isMenuUp = false;
             existentMenuLocation = null;
         }
+        
     }
     
     public void OnMouseEnter()
@@ -82,5 +85,10 @@ public class PlatformLogic : MonoBehaviour
     public void OnMouseExit()
     {
         sprite.color = defaultColor;
+    }
+
+    public string getPlatformTag()
+    {
+        return tag;
     }
 }

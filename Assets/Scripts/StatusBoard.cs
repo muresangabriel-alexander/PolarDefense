@@ -26,7 +26,7 @@ public class StatusBoard : MonoBehaviour
         statusBoardObject.SetCollectedScraps(0);
         statusBoardObject.SetDestroyedVehicles(0);
         statusBoardObject.SetFishEaten(0);
-        statusBoardObject.SetFishAvailable(0);
+        statusBoardObject.SetFishAvailable(Constants.START_FISH_AVAILABLE);
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class StatusBoard : MonoBehaviour
         string destroyedVehiclesText = "Vehicles destroyed: " + statusBoardObject.GetDestroyedVehicles();
         destroyedVehiclesTextField.GetComponent<TMPro.TextMeshProUGUI>().text = destroyedVehiclesText;
 
-        string spawnedVehiclesText = "Vehicles spawned: " + statusBoardObject.GetSpawnedVehicles() + "/" + statusBoardObject.GetTotalAmountOfVehiclesInWave();
+        string spawnedVehiclesText = "Vehicles spawned: " + statusBoardObject.GetSpawnedVehicles();
         spawnedVehiclesTextField.GetComponent<TMPro.TextMeshProUGUI>().text = spawnedVehiclesText;
 
         string collectedScrapsText = "Scraps collected: " + statusBoardObject.GetCollectedScraps();

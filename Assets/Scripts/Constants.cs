@@ -16,26 +16,41 @@ public class Constants : MonoBehaviour
         public static readonly string NORMAL_ENEMY = "NORMAL_ENEMY";
         public static readonly string TRUCK_ENEMY = "TRUCK_ENEMY";
         public static readonly string CRANE_TRUCK_ENEMY = "CRANE_TRUCK_ENEMY"; 
+        public static readonly string WATER_TOWER = "WATER_TOWER"; 
+        public static readonly string PLATFORM_WATER = "PLATFORM_WATER";
+        public static readonly string WATER = "WATER";
+        public static readonly string WIND = "WIND";
 
 
 
-        // Enemy constants
-        public static readonly float NORMAL_ENEMY_SPEED = 2.0f;
-        public static readonly int NORMAL_ENEMY_DAMAGE = 3;
-        public static readonly int NORMAL_ENEMY_HEALTH = 10;
-        public static readonly int NORMAL_ENEMY_POINTS = 1;
+    // Enemy constants
+    public static readonly float NORMAL_ENEMY_SPEED = 2.0f;
+    public static readonly int NORMAL_ENEMY_DAMAGE = 3;
+    public static readonly int NORMAL_ENEMY_HEALTH = 10 + (5 * EnemySpawner.waveNum);
+    public static readonly int NORMAL_ENEMY_POINTS = 1;
 
-        public static readonly float TRUCK_ENEMY_SPEED = 1.0f;
-        public static readonly int TRUCK_ENEMY_DAMAGE = 6;
-        public static readonly int TRUCK_ENEMY_HEALTH = 20;
-        public static readonly int TRUCK_ENEMY_POINTS = 2;
+    public static readonly float TRUCK_ENEMY_SPEED = 1.0f + (0.05f * EnemySpawner.waveNum);
+    public static readonly int TRUCK_ENEMY_DAMAGE = 6;
+    public static readonly int TRUCK_ENEMY_HEALTH = 20 + (5 * EnemySpawner.waveNum);
+    public static readonly int TRUCK_ENEMY_POINTS = 2;
 
-        public static readonly float CRANE_TRUCK_ENEMY_SPEED = 0.5f;
-        public static readonly int CRANE_TRUCK_ENEMY_DAMAGE = 10;
-        public static readonly int CRANE_TRUCK_ENEMY_HEALTH = 30;
-        public static readonly int CRANE_TRUCK_ENEMY_POINTS = 3;
+    public static readonly float CRANE_TRUCK_ENEMY_SPEED = 0.5f + (0.05f * EnemySpawner.waveNum);
+    public static readonly int CRANE_TRUCK_ENEMY_DAMAGE = 10;
+    public static readonly int CRANE_TRUCK_ENEMY_HEALTH = 30 + (5*EnemySpawner.waveNum);
+    public static readonly int CRANE_TRUCK_ENEMY_POINTS = 3;
 
-    public static readonly float ENEMY_SPAWN_RATE = 8.0f;
+    public static float ENEMY_SPAWN_RATE = 3.0f;
+    public static float WAIT_AFTER_WAVE = 10.0f;
+
+    public static readonly int FISH_HUNGER_FILL = 2;
+    public static readonly float FISH_REFRESH_RATE = 15.0f;
+    public static readonly int START_FISH_AVAILABLE = 30;
+    public static readonly float EMOTION_CHANGE_TIME = 2.0f;
+
+    public static readonly float HUNGER_INCREASE_TIME = 6.0f;
+
+
+    
 
     public enum EnemyType
     {
@@ -43,6 +58,16 @@ public class Constants : MonoBehaviour
         TRUCK_ENEMY,
         CRANE_TRUCK_ENEMY
     }
+
+
+    // water tower constants
+    public static readonly float WATER_TOWER_FLOODING_RATE = 5.0f;
+    public static readonly float WATER_FLOODING_TIME = 2.0f;
+    public static readonly float WATER_TOWER_DAMAGE_OVER_TIME_PERIOD = 0.9f;
+    
+    public static readonly float WIND_TOWER_BLOWING_RATE = 5.0f;
+    public static readonly float WIND_BLOWING_TIME = 2.0f;
+    public static readonly float WIND_TOWER_DAMAGE_OVER_TIME_PERIOD = 2f;
 
 
 }

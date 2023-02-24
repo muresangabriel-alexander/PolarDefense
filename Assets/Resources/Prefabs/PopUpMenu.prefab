@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoveredOver: {fileID: 21300000, guid: e0c7713662931fb4c9873127be1fb8c7, type: 3}
-  towerObject: {fileID: 2287037629124981896, guid: dde0d293077ee8f47aa1c75056c9bd7e,
+  towerObject: {fileID: 2619722929392321071, guid: dde0d293077ee8f47aa1c75056c9bd7e,
     type: 3}
   platform: {fileID: 0}
 --- !u!1 &1014979788696725852
