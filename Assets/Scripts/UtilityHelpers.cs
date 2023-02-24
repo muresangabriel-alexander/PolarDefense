@@ -36,5 +36,6 @@ public class UtilityHelpers : MonoBehaviour
     public static void DecreaseEnemyhealth(GameObject enemy, int damage)
     {
         enemy.GetComponent<enemyLogic>().health -= damage;
+        enemy.GetComponent<enemyLogic>().RunWait();
     }
 }

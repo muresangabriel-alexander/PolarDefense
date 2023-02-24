@@ -25,15 +25,9 @@ public class enemyLogic : MonoBehaviour
     [SerializeField]
     private StatusBoardSO statusBoardObject;
 
-
-    private float damageOverTimePeriod = 0;
-
-
     void Start()
     {
         initEnemyStats();
-        
-        damageOverTimePeriod = 0;
     }
 
     private void initEnemyStats()
@@ -90,6 +84,11 @@ public class enemyLogic : MonoBehaviour
         renderer.enabled = !renderer.enabled;
     }
 
+    public void RunWait()
+    {
+        StartCoroutine(wait());
+    }
+
     private void FixedUpdate()
     {
         target = GameObject.Find($"waypoint ({currentTargetCounter})");
@@ -123,11 +122,6 @@ public class enemyLogic : MonoBehaviour
             targetFlipHandled = false;
             currentTargetCounter++;
         }
-
-        if(damageOverTimePeriod > 0f)
-        {
-            damageOverTimePeriod -= Time.deltaTime;
-        }
     }
     // Update is called once per frame
     void Update()
@@ -156,18 +150,6 @@ public class enemyLogic : MonoBehaviour
             speed = speed * 4;
         }
         
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag(Constants.WATER)) { 
-            if (damageOverTimePeriod <= 0f)
-            {
-                health -= 1;
-                damageOverTimePeriod = Constants.WATER_TOWER_DAMAGE_OVER_TIME_PERIOD;
-                StartCoroutine(wait());
-            }
-        }
     }
     
     private void OnDestroy()
