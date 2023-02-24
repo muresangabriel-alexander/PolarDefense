@@ -28,10 +28,9 @@ public class BuildWater : MonoBehaviour
     {
         if (PlatformLogic.existentMenuLocation.getPlatformTag() == Constants.PLATFORM_WATER)
         {
-            if (statusBoardSO.GetCollectedScraps() >= Constants.TOWER_BUILDING_SCRAPS_NUMBER)
-            {
-                sprite.sprite = hoveredOver;
-            }
+            
+            sprite.sprite = hoveredOver;
+            
         }   
     }
 

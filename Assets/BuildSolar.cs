@@ -26,11 +26,7 @@ public class BuildSolar : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        if (statusBoardSO.GetCollectedScraps() >= Constants.TOWER_BUILDING_SCRAPS_NUMBER)
-        {
-            sprite.sprite = hoveredOver;
-        }
-
+        sprite.sprite = hoveredOver;
     }
 
     public void OnMouseExit()

@@ -38,6 +38,14 @@ public class PlatformLogic : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (statusBoardSO.GetCollectedScraps() < Constants.TOWER_BUILDING_SCRAPS_NUMBER && builtTower == null)
+        {
+            GameObject notEnoughScrapsView = Resources.LoadAll<GameObject>("Prefabs\\notEnoughScrapsText")[0];
+
+            Instantiate(notEnoughScrapsView, (gameObject.transform.position + new Vector3(0, -0.4f, 0)), Quaternion.identity);
+            return;
+        }
+
         if (!isMenuUp )
         {
             menuInstance = Instantiate(buildMenu, this.transform.position + new Vector3(-0.325f,-2.75f,0f), Quaternion.identity );
@@ -72,14 +80,6 @@ public class PlatformLogic : MonoBehaviour
             Destroy(builtTower);
         }
 
-        if (statusBoardSO.GetCollectedScraps() < Constants.TOWER_BUILDING_SCRAPS_NUMBER)
-        {
-            GameObject notEnoughScrapsView = Resources.LoadAll<GameObject>("Prefabs\\notEnoughScrapsText")[0];
-            
-            Instantiate(notEnoughScrapsView, (gameObject.transform.position + new Vector3(0, 0.1f, 0)), gameObject.transform.rotation);
-            return;
-        }
-
         builtTower = Instantiate(tower, transform.position +  new Vector3(0f,0.25f,0f), Quaternion.identity);
         statusBoardSO.ChangeCollectedScrapsBy(-Constants.TOWER_BUILDING_SCRAPS_NUMBER);
         if (isMenuUp && existentMenuLocation ==  this)
@@ -94,6 +94,11 @@ public class PlatformLogic : MonoBehaviour
     
     public void OnMouseEnter()
     {
+        if (statusBoardSO.GetCollectedScraps() < Constants.TOWER_BUILDING_SCRAPS_NUMBER && builtTower == null)
+        {
+            return;
+        }
+
         sprite.color =  new Color( 0, 255,  0, 10);
     }
 
