@@ -49,7 +49,7 @@ public class SolarTowerDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (targetEnemy == null)
+        if (targetEnemy == null && (other.gameObject.tag == Constants.NORMAL_ENEMY || other.gameObject.tag == Constants.TRUCK_ENEMY || other.gameObject.tag == Constants.CRANE_TRUCK_ENEMY))
         {
             targetEnemy = other.gameObject;
         }
