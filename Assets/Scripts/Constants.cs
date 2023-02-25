@@ -19,6 +19,7 @@ public class Constants : MonoBehaviour
         public static readonly string WATER_TOWER = "WATER_TOWER"; 
         public static readonly string PLATFORM_WATER = "PLATFORM_WATER";
         public static readonly string WATER = "WATER";
+        public static readonly string WIND = "WIND";
 
 
 
@@ -66,6 +67,10 @@ public class Constants : MonoBehaviour
     public static readonly float WATER_TOWER_FLOODING_RATE = 5.0f;
     public static readonly float WATER_FLOODING_TIME = 2.0f;
     public static readonly float WATER_TOWER_DAMAGE_OVER_TIME_PERIOD = 0.5f;
+    
+    public static readonly float WIND_TOWER_BLOWING_RATE = 5.0f;
+    public static readonly float WIND_BLOWING_TIME = 2.0f;
+    public static readonly float WIND_TOWER_DAMAGE_OVER_TIME_PERIOD = 2f;
 
 
 }

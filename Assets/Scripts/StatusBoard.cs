@@ -23,7 +23,7 @@ public class StatusBoard : MonoBehaviour
     void Awake()
     {
         statusBoardObject.SetSpawnedVehicles(0);
-        statusBoardObject.SetCollectedScraps(20);
+        statusBoardObject.SetCollectedScraps(40);
         statusBoardObject.SetDestroyedVehicles(0);
         statusBoardObject.SetFishEaten(0);
         statusBoardObject.SetFishAvailable(Constants.START_FISH_AVAILABLE);

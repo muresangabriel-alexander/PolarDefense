@@ -28,6 +28,7 @@ public class enemyLogic : MonoBehaviour
 
 
     private float damageOverTimePeriod = 0;
+    private float damageOverTimePeriod_wind = 0;
 
 
     void Start()
@@ -35,6 +36,8 @@ public class enemyLogic : MonoBehaviour
         initEnemyStats();
         
         damageOverTimePeriod = 0;
+        damageOverTimePeriod_wind = 0;
+
     }
 
     private void initEnemyStats()
@@ -90,6 +93,17 @@ public class enemyLogic : MonoBehaviour
         //renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, renderer.color.a - 0.1f);
         renderer.enabled = !renderer.enabled;
     }
+    
+    IEnumerator wait_wind()
+    {
+        SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
+        renderer.enabled = !renderer.enabled;
+        yield return new WaitForSeconds(0.2f);
+        //renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, renderer.color.a - 0.1f);
+        //renderer.color = new Color(0.9f, renderer.color.g, renderer.color.b, renderer.color.a);
+
+        renderer.enabled = !renderer.enabled;
+    }
 
     private void FixedUpdate()
     {
@@ -128,6 +142,11 @@ public class enemyLogic : MonoBehaviour
         if(damageOverTimePeriod > 0f)
         {
             damageOverTimePeriod -= Time.deltaTime;
+        }
+        
+        if(damageOverTimePeriod_wind > 0f)
+        {
+            damageOverTimePeriod_wind -= Time.deltaTime;
         }
     }
     // Update is called once per frame
@@ -179,6 +198,16 @@ public class enemyLogic : MonoBehaviour
                 health -= 1;
                 damageOverTimePeriod = Constants.WATER_TOWER_DAMAGE_OVER_TIME_PERIOD;
                 StartCoroutine(wait());
+            }
+        }
+        
+        if (collision.CompareTag(Constants.WIND)) { 
+            if (damageOverTimePeriod_wind <= 0f)
+            {
+                Debug.Log("WINDY up in here " + health.ToString());
+                health -= 2;
+                damageOverTimePeriod_wind = Constants.WIND_TOWER_DAMAGE_OVER_TIME_PERIOD;
+                StartCoroutine(wait_wind());
             }
         }
     }

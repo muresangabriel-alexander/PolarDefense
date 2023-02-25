@@ -20,6 +20,7 @@ TagManager:
   - WATER_TOWER
   - PLATFORM_WATER
   - WATER
+  - WIND
   layers:
   - Default
   - TransparentFX
@@ -62,6 +63,9 @@ TagManager:
     locked: 0
   - name: Actors
     uniqueID: 4038615833
+    locked: 0
+  - name: Actor-Foreground
+    uniqueID: 95390357
     locked: 0
   - name: BG
     uniqueID: 45497431
