@@ -31,7 +31,7 @@ public class Constants : MonoBehaviour
 
 
     // Enemy constants
-    public static readonly float NORMAL_ENEMY_SPEED = 1.0f;
+    public static readonly float NORMAL_ENEMY_SPEED = 1.7f;
     public static readonly int NORMAL_ENEMY_DAMAGE = 3;
     public static readonly int NORMAL_ENEMY_HEALTH = 10 + (5 * EnemySpawner.waveNum);
     public static readonly int NORMAL_ENEMY_POINTS = 1;
