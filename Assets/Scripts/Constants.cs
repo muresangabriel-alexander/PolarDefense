@@ -21,10 +21,17 @@ public class Constants : MonoBehaviour
         public static readonly string WATER = "WATER";
         public static readonly string WIND = "WIND";
 
+        // SolarTower constants
+        public static readonly float SOLAR_FIRE_FREQUENCY = 1.0f;
+        public static readonly string SOLAR_PROJECTILE = "SOLAR_PROJECTILE";
+        public static readonly int NORMAL_SOLAR_DAMAGE = 1;
+        public static readonly int TRUCK_SOLAR_DAMAGE = 2;
+        public static readonly int CRANE_SOLAR_DAMAGE = 3;
+
 
 
     // Enemy constants
-    public static readonly float NORMAL_ENEMY_SPEED = 2.0f;
+    public static readonly float NORMAL_ENEMY_SPEED = 1.0f;
     public static readonly int NORMAL_ENEMY_DAMAGE = 3;
     public static readonly int NORMAL_ENEMY_HEALTH = 10 + (5 * EnemySpawner.waveNum);
     public static readonly int NORMAL_ENEMY_POINTS = 1;
