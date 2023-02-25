@@ -9,6 +9,9 @@ public class BuildWater : MonoBehaviour
     Sprite defaultSprite;
     public GameObject towerObject;
     public GameObject platform;
+
+    [SerializeField]
+    private StatusBoardSO statusBoardSO;
     
     // Start is called before the first frame update
     void Start()
@@ -24,8 +27,11 @@ public class BuildWater : MonoBehaviour
     public void OnMouseEnter()
     {
         if (PlatformLogic.existentMenuLocation.getPlatformTag() == Constants.PLATFORM_WATER)
+        {
+            
             sprite.sprite = hoveredOver;
-        
+            
+        }   
     }
 
     public void OnMouseExit()

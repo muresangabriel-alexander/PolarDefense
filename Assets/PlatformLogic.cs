@@ -13,6 +13,9 @@ public class PlatformLogic : MonoBehaviour
     private static GameObject menuInstance;
     public static PlatformLogic existentMenuLocation = null;
     private GameObject builtTower = null;
+
+    [SerializeField]
+    private StatusBoardSO statusBoardSO;
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,14 @@ public class PlatformLogic : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (statusBoardSO.GetCollectedScraps() < Constants.TOWER_BUILDING_SCRAPS_NUMBER && builtTower == null)
+        {
+            GameObject notEnoughScrapsView = Resources.LoadAll<GameObject>("Prefabs\\notEnoughScrapsText")[0];
+
+            Instantiate(notEnoughScrapsView, (gameObject.transform.position + new Vector3(0, -0.4f, 0)), Quaternion.identity);
+            return;
+        }
+
         if (!isMenuUp )
         {
             menuInstance = Instantiate(buildMenu, this.transform.position + new Vector3(-0.325f,-2.75f,0f), Quaternion.identity );
@@ -64,9 +75,13 @@ public class PlatformLogic : MonoBehaviour
     public void BuildChosenTower(GameObject tower)
     {
         if (builtTower != null)
+        {
+            statusBoardSO.ChangeCollectedScrapsBy(Constants.TOWER_BUILDING_SCRAPS_NUMBER);
             Destroy(builtTower);
+        }
 
         builtTower = Instantiate(tower, transform.position +  new Vector3(0f,0.25f,0f), Quaternion.identity);
+        statusBoardSO.ChangeCollectedScrapsBy(-Constants.TOWER_BUILDING_SCRAPS_NUMBER);
         if (isMenuUp && existentMenuLocation ==  this)
         {
             Destroy(menuInstance);
@@ -79,6 +94,11 @@ public class PlatformLogic : MonoBehaviour
     
     public void OnMouseEnter()
     {
+        if (statusBoardSO.GetCollectedScraps() < Constants.TOWER_BUILDING_SCRAPS_NUMBER && builtTower == null)
+        {
+            return;
+        }
+
         sprite.color =  new Color( 0, 255,  0, 10);
     }
 
