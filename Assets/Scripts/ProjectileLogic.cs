@@ -20,7 +20,7 @@ public class ProjectileLogic : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("SUNBURN");
         if (other.gameObject.tag == Constants.NORMAL_ENEMY)

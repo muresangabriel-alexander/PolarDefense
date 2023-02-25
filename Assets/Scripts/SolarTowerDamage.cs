@@ -30,7 +30,7 @@ public class SolarTowerDamage : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject == targetEnemy)
         {
@@ -38,7 +38,7 @@ public class SolarTowerDamage : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (targetEnemy == null && !other.CompareTag(Constants.SOLAR_PROJECTILE))
         {
@@ -47,7 +47,7 @@ public class SolarTowerDamage : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (targetEnemy == null)
         {
