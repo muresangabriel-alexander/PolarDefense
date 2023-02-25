@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildMenu: {fileID: 1014979788696725852, guid: 7813e2085c5d94649847ee485e819a36,
     type: 3}
+  statusBoardSO: {fileID: 11400000, guid: dab9e4d201bec5f47b2116a6ad32dd3f, type: 2}
 --- !u!58 &-335559669773149641
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class BuildSolar : MonoBehaviour
     Sprite defaultSprite;
     public GameObject towerObject;
     public GameObject platform;
+
+    [SerializeField]
+    private StatusBoardSO statusBoardSO;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,6 @@ public class BuildSolar : MonoBehaviour
     public void OnMouseEnter()
     {
         sprite.sprite = hoveredOver;
-        
     }
 
     public void OnMouseExit()
