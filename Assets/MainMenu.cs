@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    private HighscoreScriptable highscoreObject; 
     public void PlayGame()
     {
         SceneManager.LoadScene("SampleScene");
