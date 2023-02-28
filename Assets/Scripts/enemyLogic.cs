@@ -44,23 +44,23 @@ public class enemyLogic : MonoBehaviour
     {
         if (gameObject.tag == Constants.NORMAL_ENEMY)
         {
-            speed = Constants.NORMAL_ENEMY_SPEED;
+            speed = Constants.NORMAL_ENEMY_SPEED + (0.05f * EnemySpawner.waveNum);
             damage = Constants.NORMAL_ENEMY_DAMAGE;
-            health = Constants.NORMAL_ENEMY_HEALTH;
+            health = Constants.NORMAL_ENEMY_HEALTH + (5 * EnemySpawner.waveNum);
             enemypoints = Constants.NORMAL_ENEMY_POINTS;
         }
         else if (gameObject.tag == Constants.TRUCK_ENEMY)
         {
-            speed = Constants.TRUCK_ENEMY_SPEED;
+            speed = Constants.TRUCK_ENEMY_SPEED + (0.05f * EnemySpawner.waveNum);
             damage = Constants.TRUCK_ENEMY_DAMAGE;
-            health = Constants.TRUCK_ENEMY_HEALTH;
+            health = Constants.TRUCK_ENEMY_HEALTH + (5 * EnemySpawner.waveNum);
             enemypoints = Constants.TRUCK_ENEMY_POINTS;
         }
         else
         {
-            speed = Constants.CRANE_TRUCK_ENEMY_SPEED;
+            speed = Constants.CRANE_TRUCK_ENEMY_SPEED + (0.05f * EnemySpawner.waveNum);
             damage = Constants.CRANE_TRUCK_ENEMY_DAMAGE;
-            health = Constants.CRANE_TRUCK_ENEMY_HEALTH;
+            health = Constants.CRANE_TRUCK_ENEMY_HEALTH + (5 * EnemySpawner.waveNum);
             enemypoints = Constants.CRANE_TRUCK_ENEMY_POINTS;
         }
     }
@@ -98,7 +98,7 @@ public class enemyLogic : MonoBehaviour
     {
         SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
         renderer.enabled = !renderer.enabled;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         //renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, renderer.color.a - 0.1f);
         //renderer.color = new Color(0.9f, renderer.color.g, renderer.color.b, renderer.color.a);
 
@@ -158,15 +158,38 @@ public class enemyLogic : MonoBehaviour
             // TODO increase scraps count
             if (gameObject.tag == Constants.NORMAL_ENEMY)
             {
-                statusBoardObject.ChangeCollectedScrapsBy(Constants.NORMAL_ENEMY_SCRAPS);
+                if(EnemySpawner.waveNum > 0)
+                {
+                    statusBoardObject.ChangeCollectedScrapsBy(Constants.NORMAL_ENEMY_SCRAPS - 1);
+                }
+                else
+                {
+                    statusBoardObject.ChangeCollectedScrapsBy(Constants.NORMAL_ENEMY_SCRAPS);
+                }
+                
             }
             else if (gameObject.tag == Constants.TRUCK_ENEMY)
             {
-                statusBoardObject.ChangeCollectedScrapsBy(Constants.TRUCK_ENEMY_SCRAPS);
+
+                if (EnemySpawner.waveNum > 0)
+                {
+                    statusBoardObject.ChangeCollectedScrapsBy(Constants.TRUCK_ENEMY_SCRAPS - 1);
+                }
+                else
+                {
+                    statusBoardObject.ChangeCollectedScrapsBy(Constants.TRUCK_ENEMY_SCRAPS);
+                }
             }
             else if( gameObject.tag == Constants.CRANE_TRUCK_ENEMY)
             {
-                statusBoardObject.ChangeCollectedScrapsBy(Constants.CRANE_TRUCK_SCRAPS);
+                if (EnemySpawner.waveNum > 0)
+                {
+                    statusBoardObject.ChangeCollectedScrapsBy(Constants.CRANE_TRUCK_SCRAPS - 1);
+                }
+                else
+                {
+                    statusBoardObject.ChangeCollectedScrapsBy(Constants.CRANE_TRUCK_SCRAPS);
+                }
             }
 
             Destroy(gameObject);

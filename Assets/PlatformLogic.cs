@@ -76,7 +76,7 @@ public class PlatformLogic : MonoBehaviour
     {
         if (builtTower != null)
         {
-            statusBoardSO.ChangeCollectedScrapsBy(Constants.TOWER_BUILDING_SCRAPS_NUMBER);
+            statusBoardSO.ChangeCollectedScrapsBy(Constants.TOWER_BUILDING_SCRAPS_NUMBER + (EnemySpawner.waveNum));
             Destroy(builtTower);
         }
 

@@ -31,35 +31,35 @@ public class Constants : MonoBehaviour
 
 
     // Enemy constants
-    public static readonly float NORMAL_ENEMY_SPEED = 1.7f;
+    public static float NORMAL_ENEMY_SPEED = 1.5f;
     public static readonly int NORMAL_ENEMY_DAMAGE = 3;
-    public static readonly int NORMAL_ENEMY_HEALTH = 10 + (5 * EnemySpawner.waveNum);
+    public static int NORMAL_ENEMY_HEALTH = 10;
     public static readonly int NORMAL_ENEMY_POINTS = 1;
-    public static readonly int NORMAL_ENEMY_SCRAPS = 3;
+    public static readonly int NORMAL_ENEMY_SCRAPS = 2;
 
-    public static readonly float TRUCK_ENEMY_SPEED = 1.0f + (0.05f * EnemySpawner.waveNum);
+    public static float TRUCK_ENEMY_SPEED = 1.0f;
     public static readonly int TRUCK_ENEMY_DAMAGE = 6;
-    public static readonly int TRUCK_ENEMY_HEALTH = 20 + (5 * EnemySpawner.waveNum);
+    public static int TRUCK_ENEMY_HEALTH = 20;
     public static readonly int TRUCK_ENEMY_POINTS = 2;
-    public static readonly int TRUCK_ENEMY_SCRAPS = 5;
+    public static readonly int TRUCK_ENEMY_SCRAPS = 3;
 
-    public static readonly float CRANE_TRUCK_ENEMY_SPEED = 0.5f + (0.05f * EnemySpawner.waveNum);
+    public static float CRANE_TRUCK_ENEMY_SPEED = 0.5f;
     public static readonly int CRANE_TRUCK_ENEMY_DAMAGE = 10;
-    public static readonly int CRANE_TRUCK_ENEMY_HEALTH = 30 + (5*EnemySpawner.waveNum);
+    public static int CRANE_TRUCK_ENEMY_HEALTH = 30;
     public static readonly int CRANE_TRUCK_ENEMY_POINTS = 3;
-    public static readonly int CRANE_TRUCK_SCRAPS = 7;
+    public static readonly int CRANE_TRUCK_SCRAPS = 4;
 
-    public static float ENEMY_SPAWN_RATE = 3.0f;
+    public static float ENEMY_SPAWN_RATE = 5.0f;
     public static float WAIT_AFTER_WAVE = 10.0f;
 
     public static readonly int FISH_HUNGER_FILL = 2;
     public static readonly float FISH_REFRESH_RATE = 15.0f;
-    public static readonly int START_FISH_AVAILABLE = 30;
+    public static readonly int START_FISH_AVAILABLE = 10;
     public static readonly float EMOTION_CHANGE_TIME = 2.0f;
 
     public static readonly float HUNGER_INCREASE_TIME = 6.0f;
 
-    public static readonly int TOWER_BUILDING_SCRAPS_NUMBER = 10;
+    public static int TOWER_BUILDING_SCRAPS_NUMBER = 10;
     
 
     public enum EnemyType
@@ -72,12 +72,12 @@ public class Constants : MonoBehaviour
 
     // water tower constants
     public static readonly float WATER_TOWER_FLOODING_RATE = 5.0f;
-    public static readonly float WATER_FLOODING_TIME = 2.0f;
-    public static readonly float WATER_TOWER_DAMAGE_OVER_TIME_PERIOD = 0.5f;
+    public static readonly float WATER_FLOODING_TIME = 2f;
+    public static readonly float WATER_TOWER_DAMAGE_OVER_TIME_PERIOD = 0.8f;
     
     public static readonly float WIND_TOWER_BLOWING_RATE = 5.0f;
     public static readonly float WIND_BLOWING_TIME = 2.0f;
-    public static readonly float WIND_TOWER_DAMAGE_OVER_TIME_PERIOD = 2f;
+    public static readonly float WIND_TOWER_DAMAGE_OVER_TIME_PERIOD = 1.5f;
 
 
 }

@@ -68,7 +68,7 @@ public class playerScript : MonoBehaviour
 
 
             ChangeSprite("happy");
-            if(statusBoardObject.GetFishAvailable() == 2)
+            if(statusBoardObject.GetFishAvailable() == 1)
             {
                 allFishFished = true; 
             }

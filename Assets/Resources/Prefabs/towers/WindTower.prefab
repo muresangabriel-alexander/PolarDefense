@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 95390357
-  m_SortingLayer: 3
+  m_SortingLayerID: -256351463
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2ea6ce69ee4f11a4ebf84f0e753a97d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 2619722929041129286}
   - component: {fileID: 2619722929041129288}
   - component: {fileID: 2619722929041129287}
+  - component: {fileID: 3412617212656109601}
   m_Layer: 0
   m_Name: projectiles
   m_TagString: Untagged
@@ -4909,6 +4910,17 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!210 &3412617212656109601
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619722929041129285}
+  m_Enabled: 1
+  m_SortingLayerID: -256351463
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!1 &2619722929392321071
 GameObject:
   m_ObjectHideFlags: 0
@@ -5044,7 +5056,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.8}
+  m_Offset: {x: 0.017670155, y: 0.034975708}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5055,5 +5067,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.9}
+  m_Size: {x: 2.172007, y: 1.966302}
   m_EdgeRadius: 0

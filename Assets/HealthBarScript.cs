@@ -38,7 +38,7 @@ public class HealthBarScript : MonoBehaviour
         if (timer > Constants.HUNGER_INCREASE_TIME && HungerBarScript.currentHunger <= 0)
         {
             GameObject[] variableForPrefab = Resources.LoadAll<GameObject>("Prefabs\\damageText");
-            currentHealth--;
+            currentHealth -= 5;
             timer = 0.0f;
             UtilityHelpers.showDamage(variableForPrefab[0], -1);
         }

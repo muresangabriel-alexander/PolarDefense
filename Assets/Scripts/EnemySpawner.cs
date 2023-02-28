@@ -48,7 +48,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (statusBoardObject.GetSpawnedVehicles() == enemiesInWave && !waveNumIncreased)
         {
-            if(Constants.ENEMY_SPAWN_RATE > 0.0f)
+            if(Constants.ENEMY_SPAWN_RATE > 1.0f)
                 Constants.ENEMY_SPAWN_RATE -= 1.0f;
             waveNumIncreased = true;
         }
@@ -66,13 +66,14 @@ public class EnemySpawner : MonoBehaviour
                     Instantiate(waveView);
                     showClearedText = false;
                     statusBoardObject.SetSpawnedVehicles(0);
+                    waveNum++;
+                    
                 }
 
                 if (waveIncreasedTimer > Constants.WAIT_AFTER_WAVE)
                 {
                     waveNumIncreased = false;
                     waveIncreasedTimer = 0.0f;
-                    waveNum++;
                 }
                 else
                     waveIncreasedTimer += Time.fixedDeltaTime;
