@@ -1244,16 +1244,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Anna Glaser
+  m_text: 'All assets created by us:
+
+    Anna Glaser
 
     Tania Kaimel
 
-    Gabriel Muresan
+    Gabriel
+    Muresan
 
     Carolin Schaffer
 
-    Milad
-    Tufan'
+    Milad Tufan'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2054,15 +2056,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In the top left corner, the green bar shows you your current health and
-    the orange bar shows your current hunger. \r\nYou can only fill them up by \"going
-    fishing\" with your polar bear (click on the polar bear) but have an eye on the
-    number of fish available! Make sure that you leave enough fish for further reproduction.\r\nOnly
+  m_text: "In the top left corner, the green bar shows your current health and the
+    orange bar shows your current hunger. \r\nYou can fill them up by \"fishing\"
+    with your polar bear (click on the polar bear) but have an eye on the number
+    of fish available! Make sure that you leave enough fish for further reproduction.\r\nOnly
     if you are healthy enough and have collected enough scraps (apart from a starting
-    advantage at the beginning), you can click on the desired platform where you
-    want to position the particular defense tower.\r\nNote that the water tower can
-    only function near the lake in the middle of the map.\r\nYou can pause and finish
-    the game by pressing \"P\" on your keyboard."
+    advantage at the beginning), you can click on the desired platform to position
+    the particular defense tower.\r\nNote that the water tower only works near the
+    lake in the middle of the map.\r\nYou can pause and finish the game by pressing
+    \"P\" on your keyboard."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2604,12 +2606,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Play as a territorial, baby, genius, polar bear trying to stop the construction
     of a highway spanning from the forests of central Europe all the way to the heart
-    of the North Pole. \r\nYou must stop all manner of road-building vehicles by
-    building environmentally friendly defense towers (wind, solar, water) that turn
-    them into scraps for building up even more protection. \r\nYou also need to worry
-    about fishing in a sustainable way to keep your polar bear alive.\r\nThe goal
-    is to survive different enemy waves with increasing difficulty and improve your
-    highscore of destroyed vehicles."
+    of the North Pole. \r\nYou must stop all types of road-building vehicles by building
+    environmentally friendly defense towers (wind, solar, water) that turn enemies
+    into scraps. These can be used to build even more protection. \r\nYou also need
+    to worry about fishing in a sustainable way to keep your polar bear alive.\r\nThe
+    goal is to survive different enemy waves with increasing difficulty and improve
+    your highscore of destroyed vehicles."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
