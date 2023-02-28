@@ -77,6 +77,7 @@ public class PlatformLogic : MonoBehaviour
             existentMenuLocation =  this;
             isMenuUp = true;
         }
+        Debug.Log("Tag" + tag);
     }
     
     public void BuildChosenTower(GameObject tower)
@@ -96,12 +97,11 @@ public class PlatformLogic : MonoBehaviour
             isMenuUp = false;
             existentMenuLocation = null;
         }
-        
+        Debug.Log("Tag" + tag);
     }
     
     public void OnMouseEnter()
     {
-        tower_costs_scraps = Constants.TOWER_BUILDING_SCRAPS_NUMBER + (EnemySpawner.waveNum);
         if (statusBoardSO.GetCollectedScraps() < tower_costs_scraps && builtTower == null)
         {
             return;

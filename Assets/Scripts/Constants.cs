@@ -12,21 +12,22 @@ public class Constants : MonoBehaviour
       public static readonly string PLATFORM = "PLATFORM";
       public static readonly string CURVE = "CURVE";
       public static readonly string CURVE_END = "CURVE_END";
-        public static readonly string CURVE_MIDDLE = "CURVE_MIDDLE";
-        public static readonly string NORMAL_ENEMY = "NORMAL_ENEMY";
-        public static readonly string TRUCK_ENEMY = "TRUCK_ENEMY";
-        public static readonly string CRANE_TRUCK_ENEMY = "CRANE_TRUCK_ENEMY"; 
-        public static readonly string WATER_TOWER = "WATER_TOWER"; 
-        public static readonly string PLATFORM_WATER = "PLATFORM_WATER";
-        public static readonly string WATER = "WATER";
-        public static readonly string WIND = "WIND";
+      public static readonly string CURVE_MIDDLE = "CURVE_MIDDLE";
+      public static readonly string NORMAL_ENEMY = "NORMAL_ENEMY";
+      public static readonly string TRUCK_ENEMY = "TRUCK_ENEMY";
+      public static readonly string CRANE_TRUCK_ENEMY = "CRANE_TRUCK_ENEMY"; 
+      public static readonly string WATER_TOWER = "WATER_TOWER"; 
+      public static readonly string PLATFORM_WATER = "PLATFORM_WATER";
+      public static readonly string WATER = "WATER";
+      public static readonly string WIND = "WIND";
+      public static readonly string SOLAR_PROJECTILE = "SOLAR_PROJECTILE";
 
-        // SolarTower constants
-        public static readonly float SOLAR_FIRE_FREQUENCY = 1.0f;
-        public static readonly string SOLAR_PROJECTILE = "SOLAR_PROJECTILE";
-        public static readonly int NORMAL_SOLAR_DAMAGE = 1;
-        public static readonly int TRUCK_SOLAR_DAMAGE = 2;
-        public static readonly int CRANE_SOLAR_DAMAGE = 3;
+    // SolarTower constants
+    public static readonly float SOLAR_FIRE_FREQUENCY = 1.0f;
+
+    public static readonly int NORMAL_SOLAR_DAMAGE = 1;
+    public static readonly int TRUCK_SOLAR_DAMAGE = 2;
+    public static readonly int CRANE_SOLAR_DAMAGE = 3;
 
 
 
@@ -54,7 +55,7 @@ public class Constants : MonoBehaviour
 
     public static readonly int FISH_HUNGER_FILL = 2;
     public static readonly float FISH_REFRESH_RATE = 15.0f;
-    public static readonly int START_FISH_AVAILABLE = 10;
+    public static readonly int START_FISH_AVAILABLE = 15;
     public static readonly float EMOTION_CHANGE_TIME = 2.0f;
 
     public static readonly float HUNGER_INCREASE_TIME = 6.0f;

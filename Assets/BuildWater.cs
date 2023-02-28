@@ -28,9 +28,7 @@ public class BuildWater : MonoBehaviour
     {
         if (PlatformLogic.existentMenuLocation.getPlatformTag() == Constants.PLATFORM_WATER)
         {
-            
             sprite.sprite = hoveredOver;
-            
         }   
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8880943965223154860}
   - component: {fileID: 8880943965223154861}
   - component: {fileID: 8694911339299877524}
-  - component: {fileID: 2753796096650239211}
+  - component: {fileID: 833605711273133455}
   m_Layer: 0
   m_Name: SolarTower
   m_TagString: Untagged
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetEnemy: {fileID: 0}
---- !u!58 &2753796096650239211
-CircleCollider2D:
+--- !u!70 &833605711273133455
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,9 +109,9 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.7
+  m_Offset: {x: 0.0070203147, y: -0.070202276}
+  m_Size: {x: 1.2854894, y: 1.388453}
+  m_Direction: 0
