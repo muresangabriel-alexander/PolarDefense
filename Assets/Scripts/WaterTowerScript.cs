@@ -64,6 +64,17 @@ public class WaterTowerScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (canAttack && triggerIsEnemy(collision.tag))
+        {
+            cooldownTime = Constants.WATER_TOWER_FLOODING_RATE;
+            StartCoroutine(spawnWater());
+            StartCoroutine(emptyWaterTower());
+            isFlooded = true;
+        }
+    }
+
     IEnumerator spawnWater()
     {
         GameObject water = transform.GetChild(0).gameObject;
