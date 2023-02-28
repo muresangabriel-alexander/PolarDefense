@@ -98,11 +98,16 @@ public class enemyLogic : MonoBehaviour
     {
         SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
         renderer.enabled = !renderer.enabled;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         //renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, renderer.color.a - 0.1f);
         //renderer.color = new Color(0.9f, renderer.color.g, renderer.color.b, renderer.color.a);
 
         renderer.enabled = !renderer.enabled;
+    }
+
+    public void waitSun()
+    {
+        StartCoroutine(wait_wind());
     }
 
     private void FixedUpdate()
