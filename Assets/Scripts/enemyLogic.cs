@@ -88,21 +88,21 @@ public class enemyLogic : MonoBehaviour
     IEnumerator wait()
     {
         SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
-        renderer.enabled = !renderer.enabled;
+        renderer.enabled = false;
         yield return new WaitForSeconds(0.2f);
         //renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, renderer.color.a - 0.1f);
-        renderer.enabled = !renderer.enabled;
+        renderer.enabled = true;
     }
     
     IEnumerator wait_wind()
     {
         SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
-        renderer.enabled = !renderer.enabled;
+        renderer.enabled = false;
         yield return new WaitForSeconds(0.15f);
         //renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, renderer.color.a - 0.1f);
         //renderer.color = new Color(0.9f, renderer.color.g, renderer.color.b, renderer.color.a);
 
-        renderer.enabled = !renderer.enabled;
+        renderer.enabled = true;
     }
 
     public void waitSun()
@@ -123,11 +123,21 @@ public class enemyLogic : MonoBehaviour
         if (calculateDistance(gameObject.transform, target.transform) < 0.3)
         {
             SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
+            Collider2D coll = gameObject.GetComponent<Collider2D>();
 
             if (target.tag == Constants.TUNNEL_ENTRY)
+            {
+                coll.enabled = false;
                 renderer.enabled = false;
+            }
+                
+                
             else if (target.tag == Constants.TUNNEL_EXIT)
+            {
+                coll.enabled = true;
                 renderer.enabled = true;
+            }
+               
 
             else if (target.tag == Constants.FINISH_LINE)
             {

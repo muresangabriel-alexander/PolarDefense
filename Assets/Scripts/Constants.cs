@@ -32,7 +32,7 @@ public class Constants : MonoBehaviour
 
 
     // Enemy constants
-    public static float NORMAL_ENEMY_SPEED = 1.5f;
+    public static float NORMAL_ENEMY_SPEED = 1.3f;
     public static readonly int NORMAL_ENEMY_DAMAGE = 3;
     public static int NORMAL_ENEMY_HEALTH = 10;
     public static readonly int NORMAL_ENEMY_POINTS = 1;
@@ -78,7 +78,7 @@ public class Constants : MonoBehaviour
     
     public static readonly float WIND_TOWER_BLOWING_RATE = 5.0f;
     public static readonly float WIND_BLOWING_TIME = 2.0f;
-    public static readonly float WIND_TOWER_DAMAGE_OVER_TIME_PERIOD = 1.5f;
+    public static readonly float WIND_TOWER_DAMAGE_OVER_TIME_PERIOD = 2f;
 
 
 }

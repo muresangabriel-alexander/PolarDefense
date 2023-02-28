@@ -4933,7 +4933,7 @@ GameObject:
   - component: {fileID: 2619722929392321074}
   - component: {fileID: 2619722929392321072}
   - component: {fileID: 2619722929392321076}
-  - component: {fileID: 2619722929392321077}
+  - component: {fileID: 7131455547857369255}
   m_Layer: 0
   m_Name: WindTower
   m_TagString: WIND
@@ -5043,8 +5043,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &2619722929392321077
-BoxCollider2D:
+--- !u!70 &7131455547857369255
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5056,16 +5056,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017670155, y: 0.034975708}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.172007, y: 1.966302}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.0058827884, y: -0.16177934}
+  m_Size: {x: 1.6471, y: 1.488274}
+  m_Direction: 1

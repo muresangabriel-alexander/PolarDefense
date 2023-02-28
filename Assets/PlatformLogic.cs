@@ -77,7 +77,6 @@ public class PlatformLogic : MonoBehaviour
             existentMenuLocation =  this;
             isMenuUp = true;
         }
-        Debug.Log("Tag" + tag);
     }
     
     public void BuildChosenTower(GameObject tower)
@@ -97,7 +96,6 @@ public class PlatformLogic : MonoBehaviour
             isMenuUp = false;
             existentMenuLocation = null;
         }
-        Debug.Log("Tag" + tag);
     }
     
     public void OnMouseEnter()

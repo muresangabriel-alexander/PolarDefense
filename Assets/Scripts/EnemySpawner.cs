@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     public static int waveNum = 0;
-    public static int enemiesInWave = 30;
+    public static int enemiesInWave = 25;
     public Vector3 initSpawnPointNormal = new Vector3(-9.94f, -4.61f, 0);
     public Vector3 initSpawnPointTruck= new Vector3(-9.94f, -4.36f, 0);
     public Vector3 initSpawnPointCraneTruck= new Vector3(-9.94f, -4.384295f, 0);
