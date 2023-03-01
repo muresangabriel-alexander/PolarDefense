@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,6 +14,7 @@ public class PlatformLogic : MonoBehaviour
     private static GameObject menuInstance;
     public static PlatformLogic existentMenuLocation = null;
     private GameObject builtTower = null;
+    private int tower_costs_scraps = Constants.TOWER_BUILDING_SCRAPS_NUMBER + (EnemySpawner.waveNum);
 
     [SerializeField]
     private StatusBoardSO statusBoardSO;
@@ -35,10 +37,15 @@ public class PlatformLogic : MonoBehaviour
     {
     }
 
+    private void FixedUpdate()
+    {
+        tower_costs_scraps = Constants.TOWER_BUILDING_SCRAPS_NUMBER + (EnemySpawner.waveNum);
+    }
+
 
     void OnMouseDown()
     {
-        if (statusBoardSO.GetCollectedScraps() < Constants.TOWER_BUILDING_SCRAPS_NUMBER && builtTower == null)
+        if (statusBoardSO.GetCollectedScraps() < tower_costs_scraps && builtTower == null)
         {
             GameObject notEnoughScrapsView = Resources.LoadAll<GameObject>("Prefabs\\notEnoughScrapsText")[0];
 
@@ -76,12 +83,12 @@ public class PlatformLogic : MonoBehaviour
     {
         if (builtTower != null)
         {
-            statusBoardSO.ChangeCollectedScrapsBy(Constants.TOWER_BUILDING_SCRAPS_NUMBER);
+            statusBoardSO.ChangeCollectedScrapsBy(tower_costs_scraps);
             Destroy(builtTower);
         }
 
         builtTower = Instantiate(tower, transform.position +  new Vector3(0f,0.25f,0f), Quaternion.identity);
-        statusBoardSO.ChangeCollectedScrapsBy(-Constants.TOWER_BUILDING_SCRAPS_NUMBER);
+        statusBoardSO.ChangeCollectedScrapsBy(-tower_costs_scraps);
         if (isMenuUp && existentMenuLocation ==  this)
         {
             Destroy(menuInstance);
@@ -89,12 +96,11 @@ public class PlatformLogic : MonoBehaviour
             isMenuUp = false;
             existentMenuLocation = null;
         }
-        
     }
     
     public void OnMouseEnter()
     {
-        if (statusBoardSO.GetCollectedScraps() < Constants.TOWER_BUILDING_SCRAPS_NUMBER && builtTower == null)
+        if (statusBoardSO.GetCollectedScraps() < tower_costs_scraps && builtTower == null)
         {
             return;
         }

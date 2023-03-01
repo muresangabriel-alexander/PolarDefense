@@ -22,8 +22,10 @@ public class playerScript : MonoBehaviour
 
     private float timer = 15.0f;
     private float emotionTimer = 1.0f;
+    private bool allFishFished = false; 
     void Start()
     {
+        allFishFished = false; 
     }
 
 
@@ -66,6 +68,10 @@ public class playerScript : MonoBehaviour
 
 
             ChangeSprite("happy");
+            if(statusBoardObject.GetFishAvailable() == 1)
+            {
+                allFishFished = true; 
+            }
         }
         else
         {
@@ -84,6 +90,7 @@ public class playerScript : MonoBehaviour
             Destroy(gameObject);
             SceneManager.LoadScene("FinalScene");
         }
+
     }
 
     private void FixedUpdate()
@@ -95,7 +102,10 @@ public class playerScript : MonoBehaviour
         else
         {
             timer = 0.0f;
-            statusBoardObject.SetFishAvailable(statusBoardObject.GetFishAvailable() + 1);
+            if(!allFishFished)
+            {
+                statusBoardObject.SetFishAvailable(statusBoardObject.GetFishAvailable() + 1);
+            }
         }
 
         if (emotionTimer < Constants.EMOTION_CHANGE_TIME)

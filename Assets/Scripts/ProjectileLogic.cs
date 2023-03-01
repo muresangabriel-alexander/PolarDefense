@@ -25,16 +25,19 @@ public class ProjectileLogic : MonoBehaviour
         Debug.Log("SUNBURN");
         if (other.gameObject.tag == Constants.NORMAL_ENEMY)
         {
+            other.gameObject.GetComponent<enemyLogic>().waitSun();
             UtilityHelpers.DecreaseEnemyhealth(other.gameObject, Constants.NORMAL_SOLAR_DAMAGE);
             Destroy(gameObject);
         }
         else if (other.gameObject.tag == Constants.TRUCK_ENEMY)
         {
+            other.gameObject.GetComponent<enemyLogic>().waitSun();
             UtilityHelpers.DecreaseEnemyhealth(other.gameObject, Constants.TRUCK_SOLAR_DAMAGE);
             Destroy(gameObject);
         }
         else if (other.gameObject.tag == Constants.CRANE_TRUCK_ENEMY)
         {
+            other.gameObject.GetComponent<enemyLogic>().waitSun();
             UtilityHelpers.DecreaseEnemyhealth(other.gameObject, Constants.CRANE_SOLAR_DAMAGE);
             Destroy(gameObject);
         }
